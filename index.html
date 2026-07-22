@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cluster Green Villa Kualu</title>
+
+    <!-- Open Graph (WhatsApp/FB/Telegram Preview) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cluster Green Villa Kualu | Rumah Subsidi DP 1 Juta">
+    <meta property="og:description" content="Hunian asri & modern di Desa Kualu, Tambang, Kampar. Lokasi strategis dekat Pekanbaru, tanah lega, spesifikasi berkualitas. Promo DP hanya 1 juta!">
+    <meta property="og:image" content="https://dhanispace.github.io/kualu/img/l1.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://dhanispace.github.io/kualu/">
+    <meta property="og:locale" content="id_ID">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Optimasi Tombol Transparan */
+        .btn-outline-wa, .btn-outline-ig {
+            background: transparent !important;
+            box-shadow: none !important;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-outline-wa { border: 1.5px solid #25D366; color: #25D366 !important; }
+        .btn-outline-ig { border: 1.5px solid #e1306c; color: #e1306c !important; }
+        
+        .btn-outline-wa i { color: #25D366; transition: all 0.3s ease-in-out; }
+        .btn-outline-ig i { color: #e1306c; transition: all 0.3s ease-in-out; }
+
+        .btn-outline-wa:hover {
+            background: #25D366 !important; color: #ffffff !important;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3) !important;
+        }
+        .btn-outline-ig:hover {
+            background: #e1306c !important; color: #ffffff !important;
+            box-shadow: 0 5px 15px rgba(225, 48, 108, 0.3) !important;
+        }
+        .btn-outline-wa:hover i, .btn-outline-ig:hover i { color: #ffffff; }
+
+        /* Wadah Video Responsif (3:4) */
+        .video-wrapper {
+            margin: 20px auto 0;
+            position: relative;
+            width: 100%;
+            max-width: 430px;
+            aspect-ratio: 3 / 4;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            background-color: #000;
+        }
+        .video-wrapper iframe, .video-wrapper video {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: none;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Definisi Corak Batik (Disembunyikan dengan aman menggunakan display: none) -->
+    <svg style="display: none;" aria-hidden="true">
+        <defs>
+            <pattern id="batik-kawung" width="36" height="36" patternUnits="userSpaceOnUse">
+                <rect width="36" height="36" fill="#f4f7f6"/>
+                <g fill="none" stroke="#2E7D32" stroke-width="1.2" opacity="0.55">
+                    <ellipse cx="18" cy="8" rx="7.5" ry="8.5"/>
+                    <ellipse cx="18" cy="28" rx="7.5" ry="8.5"/>
+                    <ellipse cx="8" cy="18" rx="8.5" ry="7.5"/>
+                    <ellipse cx="28" cy="18" rx="8.5" ry="7.5"/>
+                </g>
+                <circle cx="18" cy="18" r="3" fill="#FF8C00" opacity="0.8"/>
+            </pattern>
+            <symbol id="batik-medallion" viewBox="0 0 56 56">
+                <circle cx="28" cy="28" r="26" fill="#f4f7f6" stroke="#FF8C00" stroke-width="2"/>
+                <circle cx="28" cy="28" r="21" fill="none" stroke="#2E7D32" stroke-width="1" opacity="0.35"/>
+                <g fill="none" stroke="#2E7D32" stroke-width="1.5" opacity="0.85">
+                    <ellipse cx="28" cy="15.5" rx="9" ry="10"/>
+                    <ellipse cx="28" cy="40.5" rx="9" ry="10"/>
+                    <ellipse cx="15.5" cy="28" rx="10" ry="9"/>
+                    <ellipse cx="40.5" cy="28" rx="10" ry="9"/>
+                </g>
+                <circle cx="28" cy="28" r="4" fill="#FF8C00"/>
+            </symbol>
+        </defs>
+    </svg>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Green Villa <span>Kualu</span></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#tentang">Keunggulan</a></li>
+            <li><a href="#galeri">Galeri & Video</a></li>
+            <li><a href="#lokasi">Lokasi</a></li>
+            <li><a href="#kontak" class="btn-nav">Hubungi Kami</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" style="background: linear-gradient(rgba(35, 65, 45, 0.85), rgba(35, 65, 45, 0.85)), url('data:image/svg+xml;utf8,<svg width=\'30\' height=\'30\' xmlns=\'http://www.w3.org/2000/svg\'><circle cx=\'2\' cy=\'2\' r=\'1.5\' fill=\'rgba(255,255,255,0.08)\'/></svg>'), url('img/l1.jpeg') center/cover fixed;">
+        <div class="hero-content">
+            <div class="promo-badge">
+                <i class="fas fa-fire" style="color: #FF4500;"></i> PROMO SPESIAL: DP HANYA 1 JUTA!
+            </div>
+            <h1>Hunian Asri & Modern di Green Kualu</h1>
+            <p>Temukan kenyamanan hidup bersama keluarga di Perumahan Cluster Green Villa Kualu. Kawasan tertata, strategis, dan bebas banjir.</p>
+            <a href="#galeri" class="btn-primary">Lihat Tipe Rumah</a>
+        </div>
+        
+        <div class="custom-shape-divider-bottom" style="height: 90px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path fill="#f4f7f6" d="M0,90 C 180,130 360,150 540,140 C 720,130 780,60 960,55 C 1140,50 1260,90 1440,90 L1440,320 L0,320 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Pita Batik 1 -->
+    <div class="batik-ribbon" style="position:relative; line-height:0;">
+        <svg width="100%" height="26" preserveAspectRatio="none" style="display:block;" aria-hidden="true"><rect width="100%" height="100%" fill="url(#batik-kawung)"></rect></svg>
+        <svg width="56" height="56" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); filter:drop-shadow(0 2px 4px rgba(0,0,0,0.15));" aria-hidden="true"><use href="#batik-medallion"></use></svg>
+    </div>
+
+    <!-- Keunggulan Section -->
+    <section id="tentang" class="about">
+        <div class="section-header">
+            <span class="motif-eyebrow">Kenapa Green Villa Kualu</span>
+            <h2>Keunggulan Green Villa Kualu</h2>
+            <div class="motif-divider" aria-hidden="true"></div>
+            <p class="subtitle">Nilai tambah eksklusif yang menjadikan kami pilihan terbaik untuk hunian keluarga Anda.</p>
+        </div>
+        
+        <div class="features">
+            <div class="feature-card"><div class="icon-wrapper"><i class="fas fa-home"></i></div><h3>1. Konsep Semi Cluster</h3><p>Mengusung konsep Semi Cluster sehingga lingkungan lebih tertata, nyaman, rapi, dan memiliki fasad modern.</p></div>
+            <div class="feature-card"><div class="icon-wrapper"><i class="fas fa-hand-holding-usd"></i></div><h3>2. Harga Subsidi Terjangkau</h3><p>Sesuai ketentuan rumah subsidi pemerintah, memudahkan Anda memiliki rumah pertama melalui program KPR Subsidi.</p></div>
+            <div class="feature-card"><div class="icon-wrapper"><i class="fas fa-expand-arrows-alt"></i></div><h3>3. Luas Tanah Lebih Lega</h3><p>Tipe <strong>36/108 m²</strong>. Sisa lahan sangat cukup untuk taman depan, halaman belakang, atau area jemur.</p></div>
+            <div class="feature-card"><div class="icon-wrapper"><i class="fas fa-hammer"></i></div><h3>4. Spesifikasi Berkualitas</h3><p>Menggunakan pondasi beton bertulang, dinding bata merah plester, lantai <strong>Granit</strong> elegan, serta atap limas yang kokoh.</p></div>
+            <div class="feature-card"><div class="icon-wrapper"><i class="fas fa-map-marked-alt"></i></div><h3>5. Lokasi Strategis</h3><p>Berada di Desa Kualu, Tambang, Kampar yang berbatasan langsung dengan Pekanbaru. Mobilitas ke berbagai kawasan mudah.</p></div>
+            <div class="feature-card"><div class="icon-wrapper"><i class="fas fa-school"></i></div><h3>6. Dekat Fasilitas Umum</h3><p>Akses cepat menuju pusat pendidikan, faskes, tempat ibadah, pasar, minimarket, dan jalan utama menuju kota.</p></div>
+            <div class="feature-card"><div class="icon-wrapper"><i class="fas fa-landmark"></i></div><h3>7. Terdaftar di Sikumbang</h3><p>Proyek resmi terdaftar di portal Sikumbang BP Tapera pemerintah. Transparan, aman, dan terdata ketat.</p></div>
+            <div class="feature-card"><div class="icon-wrapper"><i class="fas fa-users"></i></div><h3>8. Cocok untuk Keluarga Muda</h3><p>Layout optimal dengan 2 Kamar Tidur, 1 Kamar Mandi, Ruang Tamu, dan Dapur. Ideal bagi pasangan muda.</p></div>
+            <div class="feature-card"><div class="icon-wrapper"><i class="fas fa-chart-line"></i></div><h3>9. Lingkungan Berkembang</h3><p>Berada di area Kualu yang terus maju, menjadikan nilai investasi properti Anda berpotensi meningkat pesat.</p></div>
+        </div>
+    </section>
+
+    <!-- Pita Batik 2 -->
+    <div class="batik-ribbon" style="position:relative; line-height:0;">
+        <svg width="100%" height="26" preserveAspectRatio="none" style="display:block;" aria-hidden="true"><rect width="100%" height="100%" fill="url(#batik-kawung)"></rect></svg>
+        <svg width="56" height="56" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); filter:drop-shadow(0 2px 4px rgba(0,0,0,0.15));" aria-hidden="true"><use href="#batik-medallion"></use></svg>
+    </div>
+
+    <!-- Galeri & Video Section -->
+    <section id="galeri" class="gallery">
+        <div class="section-header">
+            <span class="motif-eyebrow">Galeri &amp; Video</span>
+            <h2>Galeri Perumahan</h2>
+            <div class="motif-divider" aria-hidden="true"></div>
+            <p class="subtitle">Desain Modern Minimalis untuk Keluarga Masa Kini</p>
+        </div>
+
+        <h3 class="gallery-title"><i class="fas fa-camera"></i> Tampilan Eksterior</h3>
+        <div class="gallery-grid">
+            <img src="img/l1.jpeg" alt="Eksterior Rumah 1">
+            <img src="img/l2.jpeg" alt="Eksterior Rumah 2">
+            <img src="img/l3.jpeg" alt="Eksterior Rumah 3">
+        </div>
+
+        <h3 class="gallery-title mt-40"><i class="fas fa-couch"></i> Tampilan Interior</h3>
+        <div class="gallery-grid">
+            <img src="img/d1.jpeg" alt="Interior Ruang Tamu">
+            <img src="img/d2.jpeg" alt="Interior Dapur">
+            <img src="img/d3.jpeg" alt="Interior Kamar Mandi">
+        </div>
+
+        <h3 class="gallery-title mt-40"><i class="fas fa-video"></i> Video Review Perumahan</h3>
+        <div class="video-wrapper video-wrapper-wide">
+            <video controls>
+                <source src="img/v.mp4" type="video/mp4">
+                Maaf, browser Anda tidak mendukung pemutaran video ini.
+            </video>
+        </div>
+    </section>
+
+    <!-- Lokasi Section -->
+    <section id="lokasi" class="location">
+        <div class="section-header">
+            <span class="motif-eyebrow">Peta Lokasi</span>
+            <h2>Lokasi Kami</h2>
+            <div class="motif-divider" aria-hidden="true"></div>
+            <p class="subtitle">Perumahan Cluster Green Villa Kualu. Akses mudah ke berbagai fasilitas umum.</p>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7205731456766!2d101.36743109999999!3d0.40106440000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5a7ae843797bd%3A0x1105983cef4ff9a5!2sPerumahan%20Cluster%20Green%20Villa%20Kualu!5e0!3m2!1sen!2sid!4v1784694528622!5m2!1sen!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="contact">
+        <div class="contact-box">
+            <span class="corner-motif corner-motif-tl" aria-hidden="true"></span>
+            <span class="corner-motif corner-motif-tr" aria-hidden="true"></span>
+            <h2>Amankan Unit Anda Sekarang!</h2>
+            <p>Promo <strong>DP Cuma 1 Juta</strong> unit terbatas. Segera hubungi tim marketing kami untuk jadwal survei ke lokasi.</p>
+            
+            <div class="contact-buttons">
+                <a href="https://wa.me/6281170738999?text=Halo,%20saya%20tertarik%20dengan%20Promo%20DP%201%20Juta%20Perumahan%20Green%20Villa%20Kualu" target="_blank" class="btn-wa btn-outline-wa">
+                    <i class="fab fa-whatsapp" style="font-size: 20px;"></i> WhatsApp
+                </a>
+                <a href="https://instagram.com/tiaranie_c" target="_blank" class="btn-ig btn-outline-ig">
+                    <i class="fab fa-instagram" style="font-size: 20px;"></i> Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pita Batik 3 -->
+    <div class="batik-ribbon" style="position:relative; line-height:0;">
+        <svg width="100%" height="26" preserveAspectRatio="none" style="display:block;" aria-hidden="true"><rect width="100%" height="100%" fill="url(#batik-kawung)"></rect></svg>
+        <svg width="56" height="56" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); filter:drop-shadow(0 2px 4px rgba(0,0,0,0.15));" aria-hidden="true"><use href="#batik-medallion"></use></svg>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Cluster Green Villa Kualu.</p>
+    </footer>
+
+    <!-- Script Burger Menu -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links li a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
