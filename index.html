@@ -137,6 +137,20 @@
             60% { transform: translateY(-6px); }
         }
 
+        /* Corak Batik Khusus untuk Navbar */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.96) !important;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20 0 A 20 20 0 0 1 40 20 A 20 20 0 0 1 20 40 A 20 20 0 0 1 0 20 A 20 20 0 0 1 20 0 Z' fill='none' stroke='%232E7D32' stroke-width='1' opacity='0.08'/%3E%3C/svg%3E") !important;
+            border-bottom: none !important;
+        }
+        /* Garis Pucuk Rebung di bawah Navbar */
+        .navbar::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; width: 100%; height: 5px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='5'%3E%3Cpath d='M0 5 L8 0 L16 5' fill='none' stroke='%23FF8C00' stroke-width='2'/%3E%3C/svg%3E") repeat-x;
+        }
+
         @media (max-width: 768px) {
             .address-box {
                 flex-direction: column;
@@ -150,7 +164,7 @@
 </head>
 <body>
 
-    <!-- Definisi Corak Batik / Hiasan Bunga (Telah Dipercantik Menjadi Bunga Mandala) -->
+    <!-- Definisi Corak Batik Geometris (Pucuk Rebung & Belah Ketupat Khas Riau) -->
     <svg style="display: none;" aria-hidden="true">
         <defs>
             <pattern id="batik-kawung" width="36" height="36" patternUnits="userSpaceOnUse">
@@ -164,23 +178,22 @@
                 <circle cx="18" cy="18" r="3.5" fill="#FF8C00" opacity="0.9"/>
             </pattern>
 
-            <!-- Hiasan Bunga (Mandala Floral) yang Lebih Menarik & Mewah -->
+            <!-- Hiasan Batik Belah Ketupat Khas Riau (Menggantikan Bunga) -->
             <symbol id="batik-medallion" viewBox="0 0 64 64">
-                <!-- Cincin Luar -->
-                <circle cx="32" cy="32" r="30" fill="#f4f7f6" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="3 3"/>
-                <circle cx="32" cy="32" r="26" fill="#fff" stroke="#FF8C00" stroke-width="2"/>
-                
-                <!-- 8 Kelopak Bunga (Petals) -->
-                <g fill="none" stroke="#2E7D32" stroke-width="2" opacity="0.85">
-                    <ellipse cx="32" cy="32" rx="6" ry="21" transform="rotate(0 32 32)"/>
-                    <ellipse cx="32" cy="32" rx="6" ry="21" transform="rotate(45 32 32)"/>
-                    <ellipse cx="32" cy="32" rx="6" ry="21" transform="rotate(90 32 32)"/>
-                    <ellipse cx="32" cy="32" rx="6" ry="21" transform="rotate(135 32 32)"/>
-                </g>
-                
-                <!-- Putik / Bagian Tengah Bunga -->
-                <circle cx="32" cy="32" r="8" fill="#E8F5E9" stroke="#FF8C00" stroke-width="1.5"/>
-                <circle cx="32" cy="32" r="4" fill="#FF8C00"/>
+                <!-- Latar belakang belah ketupat utama -->
+                <path d="M 32 2 L 62 32 L 32 62 L 2 32 Z" fill="#f4f7f6" stroke="#2E7D32" stroke-width="2"/>
+                <!-- Garis oranye dalam -->
+                <path d="M 32 8 L 56 32 L 32 56 L 8 32 Z" fill="none" stroke="#FF8C00" stroke-width="2.5"/>
+                <!-- Garis putus-putus hijau -->
+                <path d="M 32 14 L 50 32 L 32 50 L 14 32 Z" fill="none" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <!-- Inti tengah -->
+                <path d="M 32 22 L 42 32 L 32 42 L 22 32 Z" fill="#E8F5E9" stroke="#FF8C00" stroke-width="1.5"/>
+                <circle cx="32" cy="32" r="3" fill="#2E7D32"/>
+                <!-- Titik-titik penyempurna sudut (Ornamen Songket) -->
+                <circle cx="32" cy="14" r="2" fill="#2E7D32"/>
+                <circle cx="32" cy="50" r="2" fill="#2E7D32"/>
+                <circle cx="14" cy="32" r="2" fill="#2E7D32"/>
+                <circle cx="50" cy="32" r="2" fill="#2E7D32"/>
             </symbol>
         </defs>
     </svg>
@@ -190,7 +203,7 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Navbar -->
+    <!-- Navbar dengan Corak Batik -->
     <nav class="navbar">
         <div class="logo">Green Villa <span>Kualu</span></div>
         <div class="menu-toggle" id="mobile-menu">
@@ -207,8 +220,12 @@
         </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero" style="background: linear-gradient(rgba(35, 65, 45, 0.85), rgba(35, 65, 45, 0.85)), url('data:image/svg+xml;utf8,<svg width=\'30\' height=\'30\' xmlns=\'http://www.w3.org/2000/svg\'><circle cx=\'2\' cy=\'2\' r=\'1.5\' fill=\'rgba(255,255,255,0.08)\'/></svg>'), url('img/l1.jpeg') center/cover fixed;">
+    <!-- Hero Section dengan Corak Batik Kawung Transparan di Latar Belakang -->
+    <section id="home" class="hero" style="background: 
+        linear-gradient(rgba(35, 65, 45, 0.9), rgba(35, 65, 45, 0.85)), 
+        url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'60\' height=\'60\' viewBox=\'0 0 60 60\'%3E%3Ccircle cx=\'0\' cy=\'0\' r=\'25\' fill=\'none\' stroke=\'%23ffffff\' stroke-width=\'1.5\' opacity=\'0.15\'/%3E%3Ccircle cx=\'60\' cy=\'0\' r=\'25\' fill=\'none\' stroke=\'%23ffffff\' stroke-width=\'1.5\' opacity=\'0.15\'/%3E%3Ccircle cx=\'0\' cy=\'60\' r=\'25\' fill=\'none\' stroke=\'%23ffffff\' stroke-width=\'1.5\' opacity=\'0.15\'/%3E%3Ccircle cx=\'60\' cy=\'60\' r=\'25\' fill=\'none\' stroke=\'%23ffffff\' stroke-width=\'1.5\' opacity=\'0.15\'/%3E%3Ccircle cx=\'30\' cy=\'30\' r=\'25\' fill=\'none\' stroke=\'%23FF8C00\' stroke-width=\'1.5\' opacity=\'0.2\'/%3E%3Ccircle cx=\'30\' cy=\'30\' r=\'6\' fill=\'%23FF8C00\' opacity=\'0.2\'/%3E%3C/svg%3E'), 
+        url('img/l1.jpeg') center/cover fixed;">
+        
         <div class="hero-content">
             <div class="promo-badge">
                 <i class="fas fa-fire" style="color: #FF4500;"></i> PROMO SPESIAL: DP HANYA 1 JUTA!
@@ -225,7 +242,7 @@
         </div>
     </section>
 
-    <!-- Pita Bunga 1 -->
+    <!-- Pita Batik Geometris 1 -->
     <div class="batik-ribbon" style="position:relative; line-height:0;">
         <svg width="100%" height="26" preserveAspectRatio="none" style="display:block;" aria-hidden="true"><rect width="100%" height="100%" fill="url(#batik-kawung)"></rect></svg>
         <svg width="64" height="64" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); filter:drop-shadow(0 4px 6px rgba(0,0,0,0.15));" aria-hidden="true"><use href="#batik-medallion"></use></svg>
@@ -253,7 +270,7 @@
         </div>
     </section>
 
-    <!-- Pita Bunga 2 -->
+    <!-- Pita Batik Geometris 2 -->
     <div class="batik-ribbon" style="position:relative; line-height:0;">
         <svg width="100%" height="26" preserveAspectRatio="none" style="display:block;" aria-hidden="true"><rect width="100%" height="100%" fill="url(#batik-kawung)"></rect></svg>
         <svg width="64" height="64" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); filter:drop-shadow(0 4px 6px rgba(0,0,0,0.15));" aria-hidden="true"><use href="#batik-medallion"></use></svg>
@@ -304,7 +321,7 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7205731456766!2d101.36743109999999!3d0.40106440000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5a7ae843797bd%3A0x1105983cef4ff9a5!2sPerumahan%20Cluster%20Green%20Villa%20Kualu!5e0!3m2!1sen!2sid!4v1784694528622!5m2!1sen!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
 
-        <!-- Tambahan: Alamat Tertulis -->
+        <!-- Alamat Tertulis -->
         <div class="address-box">
             <i class="fas fa-map-marked-alt"></i>
             <div>
@@ -333,7 +350,7 @@
         </div>
     </section>
 
-    <!-- Pita Bunga 3 -->
+    <!-- Pita Batik Geometris 3 -->
     <div class="batik-ribbon" style="position:relative; line-height:0;">
         <svg width="100%" height="26" preserveAspectRatio="none" style="display:block;" aria-hidden="true"><rect width="100%" height="100%" fill="url(#batik-kawung)"></rect></svg>
         <svg width="64" height="64" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); filter:drop-shadow(0 4px 6px rgba(0,0,0,0.15));" aria-hidden="true"><use href="#batik-medallion"></use></svg>
