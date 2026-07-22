@@ -2,206 +2,150 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hunian Subsidi Premium & Asri di Green Kualu</title>
-    <meta property="og:type" content="website"><meta property="og:title" content="Hunian Subsidi Premium & Asri di Green Kualu">
+    <title>Cluster Green Villa Kualu | Hunian Subsidi Modern</title>
+    <meta property="og:type" content="website"><meta property="og:title" content="Green Villa Kualu | Hunian Subsidi Modern">
     <meta property="og:description" content="Menghadirkan hunian subsidi dengan desain modern, tata ruang yang nyaman, dan lingkungan yang terus berkembang. DP mulai 1 Juta.">
     <meta property="og:image" content="https://dhanispace.github.io/kualu/img/l1.jpeg"><meta property="og:url" content="https://dhanispace.github.io/kualu/">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --primary:#0F2C26; --primary-light:#1E4A3F; --primary-deep:#081A16;
-            --secondary:#C6A15B; --secondary-light:#E8D3A0; --secondary-dark:#9C7C3F;
-            --bg-light:#FBF9F4; --bg-card:#FFFFFF; --text-dark:#1C1C1A; --text-muted:#6B6660;
-            --transition:all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+        :root {--primary:#1A3C34; --primary-light:#2c594f; --secondary:#D4AF37; --secondary-dark:#b5952f; --bg-light:#FAFAFA; --bg-card:#FFFFFF; --text-dark:#222222; --text-muted:#666666; --transition:all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);}
         * {margin:0; padding:0; box-sizing:border-box;}
-        html {scroll-behavior:smooth;}
-        body {font-family:'Montserrat',sans-serif; background-color:var(--bg-light); color:var(--text-dark); line-height:1.75; overflow-x:hidden;}
-        h1, h2, h3, h4, h5, h6, .logo {font-family:'Cormorant Garamond',serif; color:var(--primary); font-weight:600;}
+        body {font-family:'Montserrat',sans-serif; background-color:var(--bg-light); color:var(--text-dark); line-height:1.7; overflow-x:hidden;}
+        h1, h2, h3, h4, h5, h6, .logo {font-family:'Playfair Display',serif; color:var(--primary);}
         a {text-decoration:none; color:inherit;}
-        section {padding:120px 20px; max-width:1200px; margin:0 auto; position:relative;}
-        ::selection {background:var(--secondary); color:#fff;}
-
-        /* subtle songket-inspired motif backdrop */
-        .motif-bg {position:absolute; inset:0; opacity:0.035; pointer-events:none;
-            background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='84' viewBox='0 0 84 84'%3E%3Cpath d='M42 4 L74 42 L42 80 L10 42 Z' fill='none' stroke='%230F2C26' stroke-width='1'/%3E%3Ccircle cx='42' cy='42' r='6' fill='none' stroke='%230F2C26' stroke-width='1'/%3E%3C/svg%3E");
-            background-size:84px 84px;}
-
-        .section-header {text-align:center; margin-bottom:70px; position:relative; z-index:1;}
-        .motif-eyebrow {font-size:11px; text-transform:uppercase; letter-spacing:4px; color:var(--secondary-dark); font-weight:700; display:block; margin-bottom:14px; font-family:'Montserrat',sans-serif;}
-        .section-header h2 {font-size:42px; margin-bottom:18px; letter-spacing:0.3px;}
-        .motif-divider {height:1px; width:80px; background:linear-gradient(90deg, transparent, var(--secondary), transparent); margin:0 auto 24px; position:relative;}
-        .motif-divider::after {content:'◆'; position:absolute; top:-7px; left:50%; transform:translateX(-50%); color:var(--secondary); font-size:11px; background:var(--bg-light); padding:0 8px;}
-        .subtitle {color:var(--text-muted); max-width:680px; margin:0 auto; font-size:15.5px; font-weight:300;}
-
-        .navbar {position:fixed; top:0; left:0; width:100%; background:rgba(251,249,244,0.92); backdrop-filter:blur(14px); display:flex; justify-content:space-between; align-items:center; padding:18px 5%; z-index:999; transition:var(--transition); border-bottom:1px solid rgba(198,161,91,0.15);}
-        .navbar.scrolled {padding:12px 5%; box-shadow:0 10px 40px rgba(15,44,38,0.06); background:rgba(251,249,244,0.98);}
-        .logo {font-size:25px; font-weight:700; letter-spacing:0.5px;} .logo span {color:var(--secondary); font-style:italic; font-weight:600;}
-        .nav-links {list-style:none; display:flex; gap:36px; align-items:center;}
-        .nav-links li a {font-size:13px; font-weight:500; letter-spacing:0.5px; text-transform:uppercase; font-family:'Montserrat',sans-serif; transition:var(--transition); position:relative; padding-bottom:4px;}
-        .nav-links li a:not(.btn-nav)::after {content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--secondary); transition:var(--transition);}
-        .nav-links li a:not(.btn-nav):hover::after {width:100%;}
-        .nav-links li a:hover {color:var(--secondary-dark);}
-        .btn-nav {background:var(--primary); color:var(--secondary-light)!important; padding:12px 26px; border-radius:2px; font-weight:600; border:1px solid var(--primary);}
-        .btn-nav:hover {background:transparent; color:var(--primary)!important; border-color:var(--primary);}
+        section {padding:100px 20px; max-width:1200px; margin:0 auto;}
+        
+        .section-header {text-align:center; margin-bottom:60px;}
+        .motif-eyebrow {font-size:12px; text-transform:uppercase; letter-spacing:3px; color:var(--secondary); font-weight:600; display:block; margin-bottom:10px;}
+        .section-header h2 {font-size:36px; margin-bottom:15px;}
+        .motif-divider {height:2px; width:60px; background:var(--secondary); margin:0 auto 20px;}
+        .subtitle {color:var(--text-muted); max-width:700px; margin:0 auto; font-size:15px;}
+        
+        .navbar {position:fixed; top:0; left:0; width:100%; background:rgba(255,255,255,0.98); backdrop-filter:blur(10px); display:flex; justify-content:space-between; align-items:center; padding:20px 5%; z-index:999; box-shadow:0 4px 30px rgba(0,0,0,0.03); border-bottom:1px solid rgba(212,175,55,0.2);}
+        .logo {font-size:24px; font-weight:700; letter-spacing:1px;} .logo span {color:var(--secondary); font-style:italic;}
+        .nav-links {list-style:none; display:flex; gap:30px; align-items:center;}
+        .nav-links li a {font-size:14px; font-weight:500; transition:var(--transition); position:relative;}
+        .nav-links li a:hover {color:var(--secondary);}
+        .btn-nav {background:var(--secondary); color:#fff!important; padding:10px 24px; border-radius:30px; font-weight:600;}
+        .btn-nav:hover {background:var(--secondary-dark); box-shadow:0 5px 15px rgba(212,175,55,0.3);}
         .menu-toggle {display:none; flex-direction:column; cursor:pointer; gap:5px;}
-        .menu-toggle .bar {width:26px; height:1.5px; background:var(--primary); transition:var(--transition);}
-
-        .hero {min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; position:relative; padding:140px 20px 80px;
-            background:linear-gradient(160deg, rgba(8,26,22,0.88), rgba(15,44,38,0.94)), url('img/l1.jpeg') center/cover fixed;}
-        .hero::before {content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%, rgba(198,161,91,0.14), transparent 60%);}
-        .hero-content {position:relative; z-index:2; max-width:840px;}
-        .promo-badge {display:inline-flex; align-items:center; gap:8px; background:transparent; color:var(--secondary-light); padding:9px 24px; border:1px solid var(--secondary); border-radius:50px; font-size:12px; font-weight:600; letter-spacing:2px; margin-bottom:32px; text-transform:uppercase;}
-        .hero h1 {color:#fff; font-size:56px; line-height:1.2; margin-bottom:26px; font-weight:600;}
-        .hero h1 em {font-style:italic; color:var(--secondary-light);}
-        .hero p {color:rgba(255,255,255,0.78); font-size:17px; margin-bottom:44px; font-weight:300; max-width:700px; margin-left:auto; margin-right:auto;}
-        .hero-stats {display:flex; justify-content:center; gap:50px; margin-bottom:44px; flex-wrap:wrap;}
-        .hero-stat {text-align:center;} .hero-stat .num {font-family:'Cormorant Garamond',serif; font-size:32px; color:var(--secondary-light); font-weight:600; display:block;}
-        .hero-stat .label {font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.55);}
+        .menu-toggle .bar {width:25px; height:2px; background:var(--primary); transition:var(--transition);}
+        
+        .hero {height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; position:relative; padding:0 20px; background:linear-gradient(to bottom, rgba(26,60,52,0.85), rgba(26,60,52,0.95)), url('img/l1.jpeg') center/cover fixed;}
+        .hero-content {position:relative; z-index:2; max-width:900px; margin-top:50px;}
+        .promo-badge {display:inline-block; background:linear-gradient(135deg, #D4AF37, #F3E5AB); color:var(--primary); padding:8px 20px; border-radius:50px; font-size:13px; font-weight:700; letter-spacing:1px; margin-bottom:25px; box-shadow:0 4px 15px rgba(212,175,55,0.3);}
+        .hero h1 {color:#fff; font-size:48px; line-height:1.25; margin-bottom:25px;}
+        .hero p {color:rgba(255,255,255,0.85); font-size:18px; margin-bottom:40px; font-weight:300;}
         .hero-buttons {display:flex; gap:20px; justify-content:center; flex-wrap:wrap;}
-        .btn-primary, .btn-outline-light {border-radius:2px; font-size:13px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; transition:var(--transition); display:inline-block;}
-        .btn-primary {background:var(--secondary); color:var(--primary-deep); padding:16px 38px; border:1px solid var(--secondary);}
-        .btn-outline-light {background:transparent; color:#fff; border:1px solid rgba(255,255,255,0.4); padding:15px 38px;}
-        .btn-primary:hover {background:transparent; color:var(--secondary); transform:translateY(-2px);}
-        .btn-outline-light:hover {background:#fff; color:var(--primary); border-color:#fff; transform:translateY(-2px);}
-        .scroll-cue {position:absolute; bottom:34px; left:50%; transform:translateX(-50%); color:rgba(255,255,255,0.5); font-size:11px; letter-spacing:2px; text-transform:uppercase; display:flex; flex-direction:column; align-items:center; gap:8px; z-index:2;}
-        .scroll-cue .line {width:1px; height:34px; background:linear-gradient(to bottom, rgba(255,255,255,0.6), transparent); animation:scrollpulse 2s ease-in-out infinite;}
-        @keyframes scrollpulse {0%,100%{opacity:0.3;} 50%{opacity:1;}}
-
-        .features {display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:2px; background:rgba(15,44,38,0.06); position:relative; z-index:1;}
-        .feature-card {background:var(--bg-card); padding:48px 34px; text-align:left; transition:var(--transition); position:relative;}
-        .feature-card::before {content:''; position:absolute; top:0; left:0; width:0; height:2px; background:var(--secondary); transition:var(--transition);}
-        .feature-card:hover {background:var(--primary); transform:translateY(-4px); box-shadow:0 25px 50px rgba(15,44,38,0.15); z-index:2;}
-        .feature-card:hover::before {width:100%;}
-        .feature-card:hover h3, .feature-card:hover p {color:#fff;}
-        .icon-wrapper {width:52px; height:52px; margin-bottom:22px; border:1px solid var(--secondary); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:19px; color:var(--secondary); transition:var(--transition);}
-        .feature-card:hover .icon-wrapper {background:var(--secondary); color:var(--primary-deep);}
-        .feature-card h3 {font-size:21px; margin-bottom:14px; transition:var(--transition);}
-        .feature-card p {font-size:14px; color:var(--text-muted); font-weight:300; transition:var(--transition);}
-
-        .promo-banner {background:var(--primary); color:#fff; border-radius:4px; padding:56px 50px; margin:70px auto 0; text-align:center; position:relative; overflow:hidden; max-width:900px;}
-        .promo-banner::before {content:''; position:absolute; inset:0; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='84' viewBox='0 0 84 84'%3E%3Cpath d='M42 4 L74 42 L42 80 L10 42 Z' fill='none' stroke='%23C6A15B' stroke-width='1'/%3E%3C/svg%3E"); background-size:84px 84px; opacity:0.06;}
-        .promo-banner h3 {font-size:30px; margin-bottom:8px; color:var(--secondary-light); position:relative;}
-        .promo-banner > p {color:rgba(255,255,255,0.6); margin-bottom:34px; position:relative; font-weight:300;}
-        .promo-list {list-style:none; display:flex; flex-direction:column; gap:20px; font-size:15.5px; color:#fff; text-align:left; max-width:520px; margin:0 auto; position:relative;}
-        .promo-list li {display:flex; align-items:flex-start; gap:16px; font-weight:300;}
-        .promo-list li strong {color:var(--secondary-light); font-weight:600;}
-        .promo-list li i {color:var(--secondary); font-size:17px; margin-top:3px;}
-
+        .btn-primary, .btn-outline-light {border-radius:30px; font-size:15px; font-weight:600; letter-spacing:1px; transition:var(--transition); display:inline-block;}
+        .btn-primary {background:var(--secondary); color:#fff; padding:15px 35px;}
+        .btn-outline-light {background:transparent; color:#fff; border:2px solid #fff; padding:13px 35px;}
+        .btn-primary:hover, .btn-outline-light:hover {background:#fff; color:var(--primary); transform:translateY(-3px); box-shadow:0 10px 25px rgba(0,0,0,0.2);}
+        
+        .features {display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px;}
+        .feature-card {background:var(--bg-card); padding:40px 30px; border-radius:12px; text-align:center; box-shadow:0 10px 30px rgba(0,0,0,0.04); border:1px solid rgba(0,0,0,0.02); transition:var(--transition); position:relative; overflow:hidden;}
+        .feature-card::before {content:''; position:absolute; top:0; left:0; width:100%; height:4px; background:var(--secondary); transform:scaleX(0); transition:var(--transition);}
+        .feature-card:hover {transform:translateY(-10px); box-shadow:0 20px 40px rgba(26,60,52,0.08);}
+        .feature-card:hover::before {transform:scaleX(1);}
+        .icon-wrapper {width:70px; height:70px; margin:0 auto 20px; background:rgba(212,175,55,0.1); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:24px; color:var(--secondary); transition:var(--transition);}
+        .feature-card:hover .icon-wrapper {background:var(--secondary); color:#fff;}
+        .feature-card h3 {font-size:18px; margin-bottom:15px;}
+        .feature-card p {font-size:14px; color:var(--text-muted);}
+        
+        .promo-banner {background:#fff; border-radius:15px; padding:50px; margin:60px auto; text-align:center; box-shadow:0 15px 40px rgba(0,0,0,0.05); border:1px solid rgba(212,175,55,0.2); max-width:900px;}
+        .promo-banner h3 {font-size:28px; margin-bottom:25px; color:var(--primary);}
+        .promo-list {list-style:none; display:flex; flex-direction:column; gap:15px; font-size:16px; color:var(--text-dark); text-align:left; max-width:500px; margin:0 auto;}
+        .promo-list li {display:flex; align-items:center; gap:15px;} .promo-list li i {color:var(--secondary); font-size:20px;}
+        
         .gallery {background:#fff; max-width:100%;} .gallery-inner {max-width:1200px; margin:0 auto;}
-        .gallery-title {text-align:left; margin:0 0 24px; font-size:22px; font-weight:600; display:flex; align-items:center; gap:12px;}
-        .gallery-title i {color:var(--secondary); font-size:16px;}
-        .gallery-title::after {content:''; flex:1; height:1px; background:rgba(15,44,38,0.1);}
-        .gallery-grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:22px;}
-        .gallery-item {position:relative; overflow:hidden; border-radius:3px; cursor:pointer;}
-        .gallery-item img {width:100%; height:260px; object-fit:cover; display:block; transition:var(--transition);}
-        .gallery-item:hover img {transform:scale(1.08);}
-        .gallery-item::after {content:''; position:absolute; inset:0; background:linear-gradient(to top, rgba(15,44,38,0.55), transparent 45%); opacity:0; transition:var(--transition);}
-        .gallery-item:hover::after {opacity:1;}
-        .gallery-item .cap {position:absolute; bottom:16px; left:18px; color:#fff; font-family:'Cormorant Garamond',serif; font-size:17px; opacity:0; transform:translateY(10px); transition:var(--transition);}
-        .gallery-item:hover .cap {opacity:1; transform:translateY(0);}
-
-        /* Rasio video 3:4.5 */
-        .video-wrapper {margin:36px auto 0; position:relative; width:100%; max-width:400px; aspect-ratio:3/4.5; overflow:hidden; border-radius:4px; box-shadow:0 25px 60px rgba(15,44,38,0.18); background:#000;}
+        .gallery-title {text-align:center; margin:40px 0 20px; font-size:22px; font-weight:600;} .gallery-title i {color:var(--secondary); margin-right:10px;}
+        .gallery-grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:20px;}
+        .gallery-grid img {width:100%; height:250px; object-fit:cover; border-radius:8px; transition:var(--transition); box-shadow:0 4px 15px rgba(0,0,0,0.05); cursor:pointer;}
+        .gallery-grid img:hover {transform:scale(1.03); box-shadow:0 15px 30px rgba(0,0,0,0.1);}
+        
+        .video-wrapper {margin:30px auto 0; position:relative; width:100%; max-width:800px; aspect-ratio:16/9; overflow:hidden; border-radius:12px; box-shadow:0 15px 40px rgba(26,60,52,0.15); background:#000; border:4px solid #fff;}
         .video-wrapper video, .video-wrapper iframe {position:absolute; top:0; left:0; width:100%; height:100%; border:none; object-fit:cover;}
-
-        .map-container {border-radius:4px; overflow:hidden; box-shadow:0 15px 40px rgba(15,44,38,0.1); filter:grayscale(15%) contrast(1.05);}
-        .address-box {display:flex; align-items:center; gap:26px; background:#fff; padding:34px 40px; border-radius:4px; box-shadow:0 20px 50px rgba(15,44,38,0.1); margin:-45px auto 0; position:relative; z-index:10; max-width:800px; border-left:3px solid var(--secondary);}
-        .address-box i {font-size:26px; color:var(--secondary);}
-        .address-box h4 {margin-bottom:6px; font-size:19px; letter-spacing:0.3px;} .address-box p {color:var(--text-muted); font-size:14.5px; font-weight:300;}
-
-        .contact {background:var(--primary-deep); color:#fff; text-align:center; padding:110px 20px; max-width:100%; position:relative; overflow:hidden;}
-        .contact::before {content:''; position:absolute; inset:0; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='84' viewBox='0 0 84 84'%3E%3Cpath d='M42 4 L74 42 L42 80 L10 42 Z' fill='none' stroke='%23C6A15B' stroke-width='1'/%3E%3C/svg%3E"); background-size:84px 84px; opacity:0.04;}
-        .contact-box {max-width:760px; margin:0 auto; position:relative;} .contact-box h2 {color:var(--secondary-light); font-size:38px; margin-bottom:22px;}
-        .contact-box p {font-size:15.5px; color:rgba(255,255,255,0.65); margin-bottom:44px; line-height:1.85; font-weight:300;}
-        .contact-buttons {display:flex; justify-content:center; gap:20px; flex-wrap:wrap;}
-        .btn-wa, .btn-ig {padding:15px 36px; border-radius:2px; font-size:13px; font-weight:600; display:flex; align-items:center; gap:10px; transition:var(--transition); text-transform:uppercase; letter-spacing:1.5px; background:transparent; border:1px solid var(--secondary); color:var(--secondary-light);}
-        .btn-wa:hover, .btn-ig:hover {background:var(--secondary); color:var(--primary-deep); transform:translateY(-2px);}
-
-        .floating-music {position:fixed; bottom:30px; border-radius:50%; display:flex; justify-content:center; align-items:center; z-index:1000; transition:var(--transition);}
-        .floating-music {left:30px; background:var(--primary); color:var(--secondary-light); width:48px; height:48px; font-size:18px; box-shadow:0 8px 24px rgba(15,44,38,0.25); cursor:pointer; border:1px solid var(--secondary);}
-        .floating-music:hover {background:var(--secondary); color:var(--primary-deep);}
-        .music-playing {animation:pulse 2.2s infinite;}
-        @keyframes pulse {0%{box-shadow:0 0 0 0 rgba(198,161,91,0.5);} 70%{box-shadow:0 0 0 16px rgba(198,161,91,0);} 100%{box-shadow:0 0 0 0 rgba(198,161,91,0);}}
-
-        footer {text-align:center; padding:34px; background:#071815; color:rgba(255,255,255,0.4); font-size:13px; letter-spacing:0.5px;}
-        .batik-ribbon {width:100%; height:36px; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20 0 A 20 20 0 0 1 40 20 A 20 20 0 0 1 20 40 A 20 20 0 0 1 0 20 A 20 20 0 0 1 20 0 Z' fill='none' stroke='%23C6A15B' stroke-width='1' opacity='0.25'/%3E%3C/svg%3E"); background-color:var(--primary);}
-
+        
+        .map-container {border-radius:12px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.08); border:4px solid #fff;}
+        .address-box {display:flex; align-items:center; gap:25px; background:#fff; padding:30px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.05); margin:-40px auto 0; position:relative; z-index:10; max-width:800px;}
+        .address-box i {font-size:30px; color:var(--secondary); background:rgba(212,175,55,0.1); padding:20px; border-radius:50%;}
+        .address-box h4 {margin-bottom:5px; font-size:20px;} .address-box p {color:var(--text-muted); font-size:15px;}
+        
+        .contact {background:var(--primary); color:#fff; text-align:center; padding:80px 20px; max-width:100%;}
+        .contact-box {max-width:800px; margin:0 auto;} .contact-box h2 {color:var(--secondary); font-size:36px; margin-bottom:20px;}
+        .contact-box p {font-size:16px; color:rgba(255,255,255,0.85); margin-bottom:40px; line-height:1.8;}
+        
+        /* Modifikasi untuk menyusun tombol ke bawah */
+        .contact-buttons {display:flex; flex-direction:column; align-items:center; gap:20px;}
+        
+        .btn-wa, .btn-ig {padding:14px 35px; width:100%; max-width:400px; justify-content:center; border-radius:30px; font-size:15px; font-weight:600; display:flex; align-items:center; gap:10px; transition:var(--transition); text-transform:uppercase; letter-spacing:1px; background:transparent; border:2px solid var(--secondary); color:var(--secondary);}
+        .btn-wa:hover, .btn-ig:hover {background:var(--secondary); color:#fff; transform:translateY(-3px); box-shadow:0 10px 25px rgba(212,175,55,0.3);}
+        
+        .floating-wa, .floating-music {position:fixed; bottom:30px; border-radius:50%; display:flex; justify-content:center; align-items:center; z-index:1000; transition:var(--transition);}
+        .floating-wa {right:30px; background:#25D366; color:#fff; width:60px; height:60px; font-size:30px; box-shadow:0 10px 25px rgba(37,211,102,0.4);}
+        .floating-wa:hover {transform:scale(1.1) translateY(-5px);}
+        .floating-music {left:30px; background:#fff; color:var(--primary); width:50px; height:50px; font-size:20px; box-shadow:0 5px 20px rgba(0,0,0,0.15); cursor:pointer; border:2px solid var(--secondary);}
+        .floating-music:hover {transform:scale(1.1); background:var(--secondary); color:#fff;}
+        .music-playing {animation:pulse 2s infinite;}
+        @keyframes pulse {0%{box-shadow:0 0 0 0 rgba(212,175,55,0.7);} 70%{box-shadow:0 0 0 15px rgba(212,175,55,0);} 100%{box-shadow:0 0 0 0 rgba(212,175,55,0);}}
+        
+        footer {text-align:center; padding:30px; background:#112822; color:rgba(255,255,255,0.5); font-size:14px;}
+        .batik-ribbon {width:100%; height:40px; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20 0 A 20 20 0 0 1 40 20 A 20 20 0 0 1 20 40 A 20 20 0 0 1 0 20 A 20 20 0 0 1 20 0 Z' fill='none' stroke='%23D4AF37' stroke-width='1' opacity='0.2'/%3E%3C/svg%3E"); background-color:var(--primary);}
+        
         @media (max-width:768px) {
-            section {padding:80px 18px;}
-            .nav-links {position:fixed; top:66px; right:-100%; background:var(--bg-light); flex-direction:column; width:100%; padding:40px 0; box-shadow:0 15px 30px rgba(0,0,0,0.06); transition:0.4s; gap:24px;}
-            .nav-links.active {right:0;} .menu-toggle {display:flex;}
-            .hero h1 {font-size:38px;} .hero p {font-size:15.5px;}
-            .hero-stats {gap:30px;}
-            .section-header h2 {font-size:32px;}
-            .address-box {flex-direction:column; text-align:center; padding:26px; margin-top:24px;}
-            .promo-banner {padding:40px 26px;}
-            .floating-music {bottom:20px; left:20px;}
-            .scroll-cue {display:none;}
+            .nav-links {position:fixed; top:70px; right:-100%; background:#fff; flex-direction:column; width:100%; padding:40px 0; box-shadow:0 10px 20px rgba(0,0,0,0.05); transition:0.4s;}
+            .nav-links.active {right:0;} .menu-toggle {display:flex;} .hero h1 {font-size:36px;} .hero p {font-size:16px;}
+            .address-box {flex-direction:column; text-align:center; padding:20px; margin-top:20px;}
+            .floating-music {bottom:100px; left:20px;} .floating-wa {bottom:20px; right:20px;}
         }
     </style>
 </head>
 <body>
-    <!-- Ditambahkan atribut autoplay agar berusaha memutar sejak awal -->
-    <audio id="bgMusic" loop autoplay preload="auto"><source src="https://cdn.pixabay.com/download/audio/2022/05/16/audio_4af861d9a0.mp3?filename=beautiful-piano-111162.mp3" type="audio/mpeg"></audio>
+    <!-- Audio diputar dari file lokal -->
+    <audio id="bgMusic" loop autoplay><source src="img/musik.mp3" type="audio/mpeg"></audio>
+    
     <div class="floating-music" id="musicToggle" title="Putar/Hentikan Musik"><i class="fas fa-music"></i></div>
+    <a href="https://wa.me/6281170738999?text=Halo,%20saya%20tertarik%20dengan%20Promo%20DP%201%20Juta%20Perumahan%20Green%20Villa%20Kualu" class="floating-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
-    <nav class="navbar" id="navbar">
+    <nav class="navbar">
         <div class="logo">Green Villa <span>Kualu</span></div>
         <div class="menu-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
         <ul class="nav-links" id="nav-links">
             <li><a href="#home">Beranda</a></li><li><a href="#tentang">Mengapa Kami</a></li><li><a href="#galeri">Galeri</a></li>
-            <li><a href="#lokasi">Lokasi</a></li>
-            <!-- Tombol navigasi diubah agar scroll ke #galeri -->
-            <li><a href="#galeri" class="btn-nav">Lihat Rumahnya</a></li>
+            <li><a href="#lokasi">Lokasi</a></li><li><a href="#kontak" class="btn-nav">Hubungi Marketing</a></li>
         </ul>
     </nav>
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <div class="promo-badge"><i class="fas fa-crown"></i> Promo Eksklusif &mdash; DP Hanya Rp1 Juta</div>
-            <h1>Hunian Subsidi Premium & Asri<br>di <em>Green Kualu</em></h1>
+            <div class="promo-badge"><i class="fas fa-crown"></i> PROMO EKSKLUSIF: DP HANYA 1 JUTA</div>
+            <h1>Hunian Subsidi Modern untuk Kehidupan yang Lebih Baik</h1>
             <p>Menghadirkan hunian subsidi dengan desain modern, tata ruang yang nyaman, dan lingkungan yang terus berkembang. Solusi ideal bagi Anda yang menginginkan rumah pertama dengan kualitas yang dapat diandalkan.</p>
-            <div class="hero-stats">
-                <div class="hero-stat"><span class="num">1 Jt</span><span class="label">DP Mulai Dari</span></div>
-                <div class="hero-stat"><span class="num">100%</span><span class="label">Legalitas Resmi</span></div>
-                <div class="hero-stat"><span class="num">KPR</span><span class="label">Subsidi Pemerintah</span></div>
-            </div>
-            <!-- Tombol hero diubah agar scroll ke #galeri -->
-            <div class="hero-buttons">
-                <a href="#kontak" class="btn-primary">Jadwalkan Kunjungan</a>
-                <a href="#galeri" class="btn-outline-light">Lihat Rumahnya</a>
-            </div>
+            <div class="hero-buttons"><a href="#kontak" class="btn-primary">Jadwalkan Kunjungan</a><a href="https://wa.me/6281170738999" target="_blank" class="btn-outline-light">Hubungi Marketing</a></div>
         </div>
-        <div class="scroll-cue"><span>Jelajahi</span><div class="line"></div></div>
     </section>
-
+    
     <div class="batik-ribbon"></div>
 
     <section id="tentang">
-        <div class="motif-bg"></div>
-        <div class="section-header"><span class="motif-eyebrow">Nilai Lebih</span><h2>Hunian Subsidi dengan Nilai Lebih</h2><div class="motif-divider"></div>
+        <div class="section-header"><span class="motif-eyebrow">Nilai Lebih</span><h2>Mengapa Green Villa Kualu?</h2><div class="motif-divider"></div>
             <p class="subtitle">Green Villa Kualu dirancang untuk memberikan lebih dari sekadar tempat tinggal. Setiap unit mengutamakan kenyamanan, fungsi, dan kualitas, sehingga menjadi pilihan tepat untuk membangun masa depan keluarga.</p>
         </div>
-        
-        <h3 style="text-align: center; margin-bottom: 30px; font-family: 'Cormorant Garamond', serif; font-size: 28px; color: var(--primary);">Mengapa Green Villa Kualu?</h3>
-        
         <div class="features">
-            <div class="feature-card"><div class="icon-wrapper"><i class="fas fa-home"></i></div><h3>Desain Modern</h3><p>Hunian subsidi dengan desain modern yang elegan dan tata ruang yang fungsional.</p></div>
-            <div class="feature-card"><div class="icon-wrapper"><i class="fas fa-leaf"></i></div><h3>Nyaman &amp; Tertata</h3><p>Lingkungan yang nyaman dan tertata untuk tempat tumbuh kembang optimal keluarga Anda.</p></div>
-            <div class="feature-card"><div class="icon-wrapper"><i class="fas fa-map-marked-alt"></i></div><h3>Akses Strategis</h3><p>Akses strategis ke berbagai fasilitas umum, pendidikan, dan pusat perbelanjaan.</p></div>
-            <div class="feature-card"><div class="icon-wrapper"><i class="fas fa-file-signature"></i></div><h3>Legalitas Jelas</h3><p>Legalitas jelas dan proses KPR mudah, menjamin keamanan transaksi Anda.</p></div>
-            <div class="feature-card"><div class="icon-wrapper"><i class="fas fa-chart-line"></i></div><h3>Pilihan Tepat</h3><p>Cocok sebagai rumah pertama maupun instrumen investasi cerdas di masa depan.</p></div>
+            <div class="feature-card"><div class="icon-wrapper"><i class="fas fa-home"></i></div><h3>Desain Modern</h3><p>Hunian subsidi dengan fasad bergaya masa kini yang elegan dan tata ruang yang sangat fungsional.</p></div>
+            <div class="feature-card"><div class="icon-wrapper"><i class="fas fa-leaf"></i></div><h3>Nyaman & Tertata</h3><p>Menciptakan lingkungan yang asri, aman, dan nyaman untuk tempat tumbuh kembang optimal keluarga Anda.</p></div>
+            <div class="feature-card"><div class="icon-wrapper"><i class="fas fa-map-marked-alt"></i></div><h3>Akses Strategis</h3><p>Mobilitas tinggi berkat lokasi yang berdekatan dengan berbagai fasilitas umum, pendidikan, dan pusat perbelanjaan.</p></div>
+            <div class="feature-card"><div class="icon-wrapper"><i class="fas fa-file-signature"></i></div><h3>Legalitas Jelas</h3><p>Proyek resmi dengan surat menyurat lengkap, menjamin keamanan transaksi dan proses KPR yang jauh lebih mudah.</p></div>
+            <div class="feature-card"><div class="icon-wrapper"><i class="fas fa-chart-line"></i></div><h3>Investasi Menjanjikan</h3><p>Sangat cocok diwujudkan sebagai rumah pertama Anda maupun instrumen investasi cerdas di masa depan.</p></div>
         </div>
-        
         <div class="promo-banner">
-            <h3>Kemudahan Memiliki Hunian</h3><p>Miliki hunian subsidi impian dengan proses yang mudah.</p>
+            <h3>Kemudahan Memiliki Hunian</h3><p style="margin-bottom:25px; color:var(--text-muted);">Miliki hunian subsidi impian Anda sekarang dengan proses yang sangat mudah dan transparan.</p>
             <ul class="promo-list">
-                <li><i class="fas fa-check-circle"></i> <span><strong>DP mulai Rp1 Juta*</strong></span></li>
-                <li><i class="fas fa-check-circle"></i> <span><strong>Cicilan terjangkau sesuai ketentuan KPR subsidi</strong></span></li>
-                <li><i class="fas fa-check-circle"></i> <span><strong>Dibantu proses pengajuan hingga akad</strong></span></li>
+                <li><i class="fas fa-check-circle"></i> <strong>DP Sangat Ringan:</strong> Mulai Rp1 Juta Saja*</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Angsuran Nyaman:</strong> Cicilan terjangkau sesuai ketentuan resmi KPR subsidi.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Layanan Penuh:</strong> Anda dibantu penuh oleh tim kami dari proses pengajuan hingga akad.</li>
             </ul>
         </div>
     </section>
@@ -210,18 +154,10 @@
         <div class="gallery-inner">
             <div class="section-header"><span class="motif-eyebrow">Galeri Visual</span><h2>Jelajahi Hunian Anda</h2><div class="motif-divider"></div></div>
             <h3 class="gallery-title"><i class="fas fa-door-open"></i> Fasad Eksterior</h3>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="img/l1.jpeg" alt="Eksterior"><span class="cap">Tampak Depan</span></div>
-                <div class="gallery-item"><img src="img/l2.jpeg" alt="Eksterior"><span class="cap">Fasad Rumah</span></div>
-                <div class="gallery-item"><img src="img/l3.jpeg" alt="Eksterior"><span class="cap">Lingkungan Cluster</span></div>
-            </div>
-            <h3 class="gallery-title" style="margin-top:56px;"><i class="fas fa-couch"></i> Penataan Interior</h3>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="img/d1.jpeg" alt="Interior"><span class="cap">Ruang Keluarga</span></div>
-                <div class="gallery-item"><img src="img/d2.jpeg" alt="Interior"><span class="cap">Kamar Tidur</span></div>
-                <div class="gallery-item"><img src="img/d3.jpeg" alt="Interior"><span class="cap">Dapur &amp; Ruang Makan</span></div>
-            </div>
-            <h3 class="gallery-title" style="margin-top:56px;"><i class="fas fa-play-circle"></i> Video Tour</h3>
+            <div class="gallery-grid"><img src="img/l1.jpeg" alt="Eksterior"><img src="img/l2.jpeg" alt="Eksterior"><img src="img/l3.jpeg" alt="Eksterior"></div>
+            <h3 class="gallery-title" style="margin-top:50px;"><i class="fas fa-couch"></i> Penataan Interior</h3>
+            <div class="gallery-grid"><img src="img/d1.jpeg" alt="Interior"><img src="img/d2.jpeg" alt="Interior"><img src="img/d3.jpeg" alt="Interior"></div>
+            <h3 class="gallery-title" style="margin-top:50px;"><i class="fas fa-play-circle"></i> Video Tour</h3>
             <div class="video-wrapper"><video controls poster="img/l1.jpeg"><source src="img/v.mp4" type="video/mp4"></video></div>
         </div>
     </section>
@@ -240,8 +176,11 @@
         <div class="contact-box">
             <h2>Awali Perjalanan Baru Bersama Green Villa Kualu</h2>
             <p>Hunian subsidi bukan hanya tentang harga yang terjangkau, tetapi juga tentang kenyamanan, kualitas, dan tempat terbaik untuk memulai kehidupan yang lebih baik.</p>
+            
+            <!-- Tombol Disusun Menurun (Vertikal) -->
             <div class="contact-buttons">
-                <a href="https://wa.me/6281170738999?text=Halo,%20saya%20tertarik%20untuk%20jadwal%20kunjungan%20ke%20Green%20Villa%20Kualu" target="_blank" class="btn-wa"><i class="fab fa-whatsapp" style="font-size:18px;"></i> Jadwalkan Kunjungan Sekarang</a>
+                <a href="https://wa.me/6281170738999?text=Halo,%20saya%20tertarik%20untuk%20jadwal%20kunjungan%20ke%20Green%20Villa%20Kualu" target="_blank" class="btn-wa"><i class="fab fa-whatsapp" style="font-size:20px;"></i> Jadwalkan Kunjungan</a>
+                <a href="https://instagram.com/tiaranie_c" target="_blank" class="btn-ig"><i class="fab fa-instagram" style="font-size:20px;"></i> Instagram Kami</a>
             </div>
         </div>
     </section>
@@ -249,52 +188,17 @@
     <footer><p>&copy; 2026 Cluster Green Villa Kualu. All Rights Reserved.</p></footer>
 
     <script>
-        const btnMenu=document.getElementById('mobile-menu'), navMenu=document.getElementById('nav-links'), navBar=document.getElementById('navbar'), btnMusic=document.getElementById('musicToggle'), audio=document.getElementById('bgMusic');
+        const btnMenu=document.getElementById('mobile-menu'), navMenu=document.getElementById('nav-links'), navBar=document.querySelector('.navbar'), btnMusic=document.getElementById('musicToggle'), audio=document.getElementById('bgMusic');
         let isPlay=false; audio.volume=0.3;
-
+        
         btnMenu.onclick=()=> {btnMenu.classList.toggle('active'); navMenu.classList.toggle('active');};
         document.querySelectorAll('.nav-links li a').forEach(l=>l.onclick=()=>{btnMenu.classList.remove('active'); navMenu.classList.remove('active');});
-        window.onscroll=()=> navBar.classList.toggle('scrolled', window.scrollY>50);
-
-        function setPlayingUI(playing){
-            isPlay=playing;
-            btnMusic.classList.toggle('music-playing', playing);
-            btnMusic.innerHTML = playing ? '<i class="fas fa-volume-up"></i>' : '<i class="fas fa-music"></i>';
-        }
-
-        // Coba autoplay kuat untuk memutar lagu setelah klik tautan atau load
-        function forcePlayMusic() {
-            audio.muted = false;
-            audio.play().then(() => {
-                setPlayingUI(true);
-            }).catch(() => {
-                setPlayingUI(false);
-            });
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            // Coba putar ketika dimuat
-            audio.muted = true;
-            audio.play().then(() => {
-                setTimeout(() => { audio.muted = false; setPlayingUI(true); }, 150);
-            }).catch(() => { setPlayingUI(false); });
-        });
-
-        // Tangkap interaksi pengunjung (termasuk klik di bagian mana saja) untuk memastikan lagu unmuted/berputar
-        const resumeOnInteract = () => {
-            if(audio.paused || audio.muted){
-                forcePlayMusic();
-            }
-        };
-        ['click', 'touchstart', 'scroll', 'keydown'].forEach(evt => {
-            window.addEventListener(evt, resumeOnInteract, { once: true, passive: true });
-        });
-
-        btnMusic.onclick = (e) => {
-            e.stopPropagation();
-            if(isPlay){ audio.pause(); setPlayingUI(false); }
-            else { forcePlayMusic(); }
-        };
+        window.onscroll=()=> navBar.style.boxShadow=window.scrollY>50?'0 4px 30px rgba(0,0,0,0.08)':'0 4px 30px rgba(0,0,0,0.03)';
+        
+        const playMusic=()=>{audio.play().then(()=>{isPlay=true; btnMusic.classList.add('music-playing'); btnMusic.innerHTML='<i class="fas fa-volume-up"></i>';}).catch(()=>{});};
+        window.addEventListener('DOMContentLoaded', playMusic);
+        document.body.addEventListener('click', ()=>{if(!isPlay) playMusic();}, {once:true});
+        btnMusic.onclick=(e)=>{e.stopPropagation(); if(isPlay){audio.pause(); btnMusic.classList.remove('music-playing'); btnMusic.innerHTML='<i class="fas fa-music"></i>';} else {playMusic();} isPlay=!isPlay;};
     </script>
 </body>
 </html>
