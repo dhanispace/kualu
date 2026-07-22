@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cluster Green Villa Kualu | Hunian Eksklusif</title>
+    <title>Cluster Green Villa Kualu | Hunian Subsidi Modern</title>
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Cluster Green Villa Kualu | Rumah Eksklusif DP 1 Juta">
-    <meta property="og:description" content="Hunian asri & modern di Desa Kualu, Tambang, Kampar. Lokasi strategis, tanah lega, spesifikasi berkualitas premium.">
+    <meta property="og:title" content="Green Villa Kualu | Hunian Subsidi Modern untuk Kehidupan yang Lebih Baik">
+    <meta property="og:description" content="Menghadirkan hunian subsidi dengan desain modern, tata ruang yang nyaman, dan lingkungan yang terus berkembang. DP mulai 1 Juta.">
     <meta property="og:image" content="https://dhanispace.github.io/kualu/img/l1.jpeg">
     <meta property="og:url" content="https://dhanispace.github.io/kualu/">
 
@@ -91,7 +91,7 @@
         }
         .subtitle {
             color: var(--text-muted);
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
             font-size: 15px;
         }
@@ -171,12 +171,12 @@
             text-align: center;
             position: relative;
             padding: 0 20px;
-            background: linear-gradient(to bottom, rgba(26, 60, 52, 0.8), rgba(26, 60, 52, 0.95)), url('img/l1.jpeg') center/cover fixed;
+            background: linear-gradient(to bottom, rgba(26, 60, 52, 0.85), rgba(26, 60, 52, 0.95)), url('img/l1.jpeg') center/cover fixed;
         }
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 800px;
+            max-width: 900px;
             margin-top: 50px;
         }
         .promo-badge {
@@ -194,8 +194,8 @@
         .hero h1 {
             color: #ffffff;
             font-size: 48px;
-            line-height: 1.2;
-            margin-bottom: 20px;
+            line-height: 1.25;
+            margin-bottom: 25px;
         }
         .hero p {
             color: rgba(255,255,255,0.85);
@@ -203,12 +203,18 @@
             margin-bottom: 40px;
             font-weight: 300;
         }
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
         .btn-primary {
             background-color: var(--secondary);
             color: #fff;
             padding: 15px 35px;
             border-radius: 30px;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
             letter-spacing: 1px;
             transition: var(--transition);
@@ -220,8 +226,25 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
+        .btn-outline-light {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+            padding: 13px 35px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            display: inline-block;
+        }
+        .btn-outline-light:hover {
+            background-color: #fff;
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
 
-        /* Keunggulan (Features) */
+        /* Nilai Lebih & Fitur */
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -277,6 +300,43 @@
         .feature-card p {
             font-size: 14px;
             color: var(--text-muted);
+        }
+
+        /* Promo Banner Standalone */
+        .promo-banner {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 50px;
+            margin: 60px auto;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            max-width: 900px;
+        }
+        .promo-banner h3 {
+            font-size: 28px;
+            margin-bottom: 25px;
+            color: var(--primary);
+        }
+        .promo-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            font-size: 16px;
+            color: var(--text-dark);
+            text-align: left;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .promo-list li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .promo-list li i {
+            color: var(--secondary);
+            font-size: 20px;
         }
 
         /* Gallery Premium */
@@ -373,7 +433,7 @@
             font-size: 15px;
         }
 
-        /* Kontak */
+        /* Kontak / Call to Action */
         .contact {
             background-color: var(--primary);
             color: #fff;
@@ -392,8 +452,9 @@
         }
         .contact-box p {
             font-size: 16px;
-            color: rgba(255,255,255,0.8);
+            color: rgba(255,255,255,0.85);
             margin-bottom: 40px;
+            line-height: 1.8;
         }
         .contact-buttons {
             display: flex;
@@ -402,9 +463,9 @@
             flex-wrap: wrap;
         }
         
-        /* Tombol Premium */
+        /* Tombol WA & IG */
         .btn-wa, .btn-ig {
-            padding: 14px 30px;
+            padding: 14px 35px;
             border-radius: 30px;
             font-size: 15px;
             font-weight: 600;
@@ -414,29 +475,18 @@
             transition: var(--transition);
             text-transform: uppercase;
             letter-spacing: 1px;
-        }
-        .btn-wa {
-            background: #25D366;
-            color: #fff;
-            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
-        }
-        .btn-wa:hover {
-            background: #1EBE57;
-            transform: translateY(-3px);
-            box-shadow: 0 12px 25px rgba(37, 211, 102, 0.5);
-        }
-        .btn-ig {
             background: transparent;
-            color: var(--secondary);
             border: 2px solid var(--secondary);
+            color: var(--secondary);
         }
-        .btn-ig:hover {
+        .btn-wa:hover, .btn-ig:hover {
             background: var(--secondary);
             color: #fff;
             transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
         }
 
-        /* Floating WA */
+        /* Floating Buttons (Musik Kiri, WA Kanan) */
         .floating-wa {
             position: fixed;
             bottom: 30px; right: 30px;
@@ -456,6 +506,37 @@
             transform: scale(1.1) translateY(-5px);
         }
 
+        .floating-music {
+            position: fixed;
+            bottom: 30px; left: 30px;
+            background-color: #fff;
+            color: var(--primary);
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid var(--secondary);
+        }
+        .floating-music:hover {
+            transform: scale(1.1);
+            background-color: var(--secondary);
+            color: #fff;
+        }
+        .music-playing {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+
         footer {
             text-align: center;
             padding: 30px;
@@ -464,7 +545,6 @@
             font-size: 14px;
         }
 
-        /* Ornamen Batik Elegan Tersembunyi di Latar */
         .batik-ribbon {
             width: 100%;
             height: 40px;
@@ -494,12 +574,24 @@
                 padding: 20px;
                 margin-top: 20px;
             }
+            .floating-music { bottom: 100px; left: 20px; } /* Adjust on mobile */
+            .floating-wa { bottom: 20px; right: 20px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Tombol WhatsApp Melayang -->
+    <!-- Menambahkan atribut autoplay pada audio -->
+    <audio id="bgMusic" loop autoplay>
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/16/audio_4af861d9a0.mp3?filename=beautiful-piano-111162.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Tombol Kontrol Musik Melayang Kiri -->
+    <div class="floating-music" id="musicToggle" title="Putar/Hentikan Musik">
+        <i class="fas fa-music"></i>
+    </div>
+
+    <!-- Tombol WhatsApp Melayang Kanan -->
     <a href="https://wa.me/6281170738999?text=Halo,%20saya%20tertarik%20dengan%20Promo%20DP%201%20Juta%20Perumahan%20Green%20Villa%20Kualu" class="floating-wa" target="_blank" aria-label="Chat WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
@@ -514,10 +606,10 @@
         </div>
         <ul class="nav-links" id="nav-links">
             <li><a href="#home">Beranda</a></li>
-            <li><a href="#tentang">Keunggulan</a></li>
-            <li><a href="#galeri">Galeri & Video</a></li>
+            <li><a href="#tentang">Mengapa Kami</a></li>
+            <li><a href="#galeri">Galeri</a></li>
             <li><a href="#lokasi">Lokasi</a></li>
-            <li><a href="#kontak" class="btn-nav">Hubungi Kami</a></li>
+            <li><a href="#kontak" class="btn-nav">Hubungi Marketing</a></li>
         </ul>
     </nav>
 
@@ -527,9 +619,12 @@
             <div class="promo-badge">
                 <i class="fas fa-crown"></i> PROMO EKSKLUSIF: DP HANYA 1 JUTA
             </div>
-            <h1>Hunian Premium & Asri di Green Kualu</h1>
-            <p>Tingkatkan kualitas hidup keluarga Anda di Cluster Green Villa Kualu. Perpaduan desain modern, lokasi strategis, dan nilai investasi yang menjanjikan.</p>
-            <a href="#galeri" class="btn-primary">Lihat Tipe Rumah</a>
+            <h1>Hunian Subsidi Modern untuk Kehidupan yang Lebih Baik</h1>
+            <p>Menghadirkan hunian subsidi dengan desain modern, tata ruang yang nyaman, dan lingkungan yang terus berkembang. Solusi ideal bagi Anda yang menginginkan rumah pertama dengan kualitas yang dapat diandalkan.</p>
+            <div class="hero-buttons">
+                <a href="#kontak" class="btn-primary">Jadwalkan Kunjungan</a>
+                <a href="https://wa.me/6281170738999" target="_blank" class="btn-outline-light">Hubungi Marketing</a>
+            </div>
         </div>
     </section>
     
@@ -538,43 +633,48 @@
     <!-- Keunggulan Section -->
     <section id="tentang">
         <div class="section-header">
-            <span class="motif-eyebrow">Mengapa Memilih Kami</span>
-            <h2>Keunggulan Green Villa Kualu</h2>
+            <span class="motif-eyebrow">Nilai Lebih</span>
+            <h2>Mengapa Green Villa Kualu?</h2>
             <div class="motif-divider"></div>
-            <p class="subtitle">Dirancang dengan presisi untuk memenuhi standar gaya hidup modern keluarga Anda, tanpa mengorbankan kenyamanan.</p>
+            <p class="subtitle">Green Villa Kualu dirancang untuk memberikan lebih dari sekadar tempat tinggal. Setiap unit mengutamakan kenyamanan, fungsi, dan kualitas, sehingga menjadi pilihan tepat untuk membangun masa depan keluarga.</p>
         </div>
         
         <div class="features">
             <div class="feature-card">
                 <div class="icon-wrapper"><i class="fas fa-home"></i></div>
-                <h3>Semi Cluster Eksklusif</h3>
-                <p>Lingkungan tertata rapi, sistem keamanan terpadu, dan fasad rumah bergaya modern minimalis yang elegan.</p>
+                <h3>Desain Modern</h3>
+                <p>Hunian subsidi dengan fasad bergaya masa kini yang elegan dan tata ruang (layout) yang sangat fungsional.</p>
             </div>
             <div class="feature-card">
-                <div class="icon-wrapper"><i class="fas fa-gem"></i></div>
-                <h3>Spesifikasi Premium</h3>
-                <p>Pondasi beton bertulang kokoh, lantai Granit mewah, serta atap limas yang tahan lama dan estetik.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon-wrapper"><i class="fas fa-expand-arrows-alt"></i></div>
-                <h3>Luas Tanah Lega</h3>
-                <p>Tipe 36/108 m². Memberikan ruang sisa yang melimpah untuk taman hijau atau pengembangan di masa depan.</p>
+                <div class="icon-wrapper"><i class="fas fa-leaf"></i></div>
+                <h3>Nyaman & Tertata</h3>
+                <p>Menciptakan lingkungan yang asri, aman, dan nyaman untuk tempat tumbuh kembang optimal keluarga Anda.</p>
             </div>
             <div class="feature-card">
                 <div class="icon-wrapper"><i class="fas fa-map-marked-alt"></i></div>
-                <h3>Lokasi Strategis</h3>
-                <p>Berbatasan langsung dengan Pekanbaru. Aksesibilitas tinggi ke pusat bisnis dan kawasan pendidikan.</p>
+                <h3>Akses Strategis</h3>
+                <p>Mobilitas tinggi berkat lokasi yang berdekatan dengan berbagai fasilitas umum, pendidikan, dan pusat perbelanjaan.</p>
             </div>
             <div class="feature-card">
-                <div class="icon-wrapper"><i class="fas fa-tags"></i></div>
-                <h3>Harga Subsidi</h3>
-                <p>Miliki hunian mewah ini melalui kemudahan program KPR Subsidi resmi pemerintah (Terdaftar di Sikumbang).</p>
+                <div class="icon-wrapper"><i class="fas fa-file-signature"></i></div>
+                <h3>Legalitas Jelas</h3>
+                <p>Proyek resmi dengan surat menyurat lengkap, menjamin keamanan transaksi dan proses KPR yang jauh lebih mudah.</p>
             </div>
             <div class="feature-card">
                 <div class="icon-wrapper"><i class="fas fa-chart-line"></i></div>
-                <h3>Investasi Emas</h3>
-                <p>Berada di area satelit yang terus berkembang pesat, menjamin kenaikan nilai properti setiap tahunnya.</p>
+                <h3>Investasi Menjanjikan</h3>
+                <p>Sangat cocok diwujudkan sebagai rumah pertama Anda maupun instrumen investasi cerdas di masa depan.</p>
             </div>
+        </div>
+
+        <div class="promo-banner">
+            <h3>Kemudahan Memiliki Hunian</h3>
+            <p style="margin-bottom: 25px; color: var(--text-muted);">Miliki hunian subsidi impian Anda sekarang dengan proses yang sangat mudah dan transparan.</p>
+            <ul class="promo-list">
+                <li><i class="fas fa-check-circle"></i> <strong>DP Sangat Ringan:</strong> Mulai Rp1 Juta Saja*</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Angsuran Nyaman:</strong> Cicilan terjangkau sesuai ketentuan resmi KPR subsidi.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Layanan Penuh:</strong> Anda akan dibantu penuh oleh tim kami dari proses pengajuan hingga akad.</li>
+            </ul>
         </div>
     </section>
 
@@ -585,7 +685,6 @@
                 <span class="motif-eyebrow">Galeri Visual</span>
                 <h2>Jelajahi Hunian Anda</h2>
                 <div class="motif-divider"></div>
-                <p class="subtitle">Sentuhan desain kontemporer yang memadukan estetika dan fungsionalitas ruang.</p>
             </div>
 
             <h3 class="gallery-title"><i class="fas fa-door-open"></i> Fasad Eksterior</h3>
@@ -617,10 +716,9 @@
     <!-- Lokasi Section -->
     <section id="lokasi">
         <div class="section-header">
-            <span class="motif-eyebrow">Akses & Mobilitas</span>
+            <span class="motif-eyebrow">Peta Area</span>
             <h2>Lokasi Proyek Kami</h2>
             <div class="motif-divider"></div>
-            <p class="subtitle">Dikelilingi fasilitas umum pendukung untuk menunjang gaya hidup dinamis keluarga Anda.</p>
         </div>
         
         <div class="map-container">
@@ -630,24 +728,24 @@
         <div class="address-box">
             <i class="fas fa-map-marker-alt"></i>
             <div>
-                <h4>Kantor & Lokasi Proyek</h4>
+                <h4>Alamat Proyek</h4>
                 <p><strong>Cluster Green Villa Kualu</strong><br>Jl. Tambusai (Arah Kubang Raya), Desa Kualu, Kec. Tambang, Kabupaten Kampar, Riau.</p>
             </div>
         </div>
     </section>
 
-    <!-- Kontak Section -->
+    <!-- Kontak -->
     <section id="kontak" class="contact">
         <div class="contact-box">
-            <h2>Miliki Unit Anda Hari Ini</h2>
-            <p>Manfaatkan penawaran eksklusif <strong>DP 1 Juta</strong> sebelum kehabisan. Jadwalkan kunjungan pribadi (Private Viewing) Anda dengan konsultan properti kami.</p>
+            <h2>Awali Perjalanan Baru Bersama Green Villa Kualu</h2>
+            <p>Hunian subsidi bukan hanya tentang harga yang terjangkau, tetapi juga tentang kenyamanan, kualitas, dan tempat terbaik untuk memulai kehidupan yang lebih baik.</p>
             
             <div class="contact-buttons">
-                <a href="https://wa.me/6281170738999?text=Halo,%20saya%20tertarik%20dengan%20Promo%20DP%201%20Juta%20Perumahan%20Green%20Villa%20Kualu" target="_blank" class="btn-wa">
-                    <i class="fab fa-whatsapp" style="font-size: 20px;"></i> Chat WhatsApp
+                <a href="https://wa.me/6281170738999?text=Halo,%20saya%20tertarik%20untuk%20jadwal%20kunjungan%20ke%20Green%20Villa%20Kualu" target="_blank" class="btn-wa">
+                    <i class="fab fa-whatsapp" style="font-size: 20px;"></i> Jadwalkan Kunjungan Sekarang
                 </a>
                 <a href="https://instagram.com/tiaranie_c" target="_blank" class="btn-ig">
-                    <i class="fab fa-instagram" style="font-size: 20px;"></i> Ikuti Instagram
+                    <i class="fab fa-instagram" style="font-size: 20px;"></i> Instagram Kami
                 </a>
             </div>
         </div>
@@ -657,8 +755,9 @@
         <p>&copy; 2026 Cluster Green Villa Kualu. All Rights Reserved.</p>
     </footer>
 
-    <!-- Script Menu -->
+    <!-- Script Fungsionalitas Website -->
     <script>
+        // 1. Menu Mobile Toggle
         const mobileMenu = document.getElementById('mobile-menu');
         const navLinks = document.getElementById('nav-links');
 
@@ -674,7 +773,7 @@
             });
         });
 
-        // Efek Navbar saat Scroll
+        // 2. Efek Shadow Navbar saat Scroll
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('.navbar');
             if(window.scrollY > 50) {
@@ -682,6 +781,50 @@
             } else {
                 nav.style.boxShadow = '0 4px 30px rgba(0,0,0,0.03)';
             }
+        });
+
+        // 3. Audio Player (Autoplay & Fallback Click)
+        const musicToggle = document.getElementById('musicToggle');
+        const bgMusic = document.getElementById('bgMusic');
+        let isPlaying = false;
+
+        bgMusic.volume = 0.3; // Volume musik disetel 30%
+
+        // Fungsi untuk menyalakan musik dan mengubah ikon
+        function startMusic() {
+            bgMusic.play().then(() => {
+                isPlaying = true;
+                musicToggle.classList.add('music-playing');
+                musicToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+            }).catch(error => {
+                // Autoplay diblokir oleh browser, tunggu interaksi user
+                console.log("Autoplay diblokir browser. Musik akan diputar saat user klik.");
+            });
+        }
+
+        // Coba putar otomatis saat halaman dimuat
+        window.addEventListener('DOMContentLoaded', () => {
+            startMusic();
+        });
+
+        // Jika autoplay gagal, paksa putar di interaksi pertama pengguna di seluruh layar
+        document.body.addEventListener('click', () => {
+            if (!isPlaying) {
+                startMusic();
+            }
+        }, { once: true }); // event hanya berjalan satu kali
+
+        // Tombol musik manual (Stop / Play)
+        musicToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); // Mencegah bentrok dengan event klik layar di atas
+            if (isPlaying) {
+                bgMusic.pause();
+                musicToggle.classList.remove('music-playing');
+                musicToggle.innerHTML = '<i class="fas fa-music"></i>';
+            } else {
+                startMusic();
+            }
+            isPlaying = !isPlaying;
         });
     </script>
 </body>
