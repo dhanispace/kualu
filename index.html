@@ -244,17 +244,20 @@
             </div>
 
             <h3 class="gallery-title" style="margin-top:56px;"><i class="fas fa-play-circle"></i> Video Tour</h3>
-            <!-- Video 1 disesuaikan agar kompatibel penuh dengan Instagram In-App Browser -->
+            
+            <!-- Video 1 -->
             <div class="video-wrapper">
-                <video controls playsinline webkit-playsinline preload="metadata" poster="img/l1.jpeg">
+                <video controls playsinline webkit-playsinline x5-playsinline preload="auto" poster="img/l1.jpeg">
                     <source src="img/v.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung pemutaran video ini.
                 </video>
             </div>
 
-            <!-- Video 2 disesuaikan agar kompatibel penuh dengan Instagram In-App Browser -->
+            <!-- Video 2 -->
             <div class="video-wrapper wide">
-                <video controls playsinline webkit-playsinline preload="metadata" poster="img/l1.jpeg">
+                <video controls playsinline webkit-playsinline x5-playsinline preload="auto" poster="img/l1.jpeg">
                     <source src="img/w.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung pemutaran video ini.
                 </video>
             </div>
         </div>
@@ -296,6 +299,20 @@
         btnMenu.onclick=()=> {btnMenu.classList.toggle('active'); navMenu.classList.toggle('active');};
         document.querySelectorAll('.nav-links li a').forEach(l=>l.onclick=()=>{btnMenu.classList.remove('active'); navMenu.classList.remove('active');});
         window.onscroll=()=> navBar.classList.toggle('scrolled', window.scrollY>50);
+
+        // Skrip tambahan untuk memastikan video siap diputar saat diklik di In-App Browser Instagram
+        document.addEventListener("DOMContentLoaded", function() {
+            var videos = document.querySelectorAll("video");
+            videos.forEach(function(vid) {
+                vid.addEventListener("click", function() {
+                    if (vid.paused) {
+                        vid.play().catch(function(e) {
+                            console.log("Autoplay ditahan oleh peramban internal IG:", e);
+                        });
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>
