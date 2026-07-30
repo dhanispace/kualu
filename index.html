@@ -148,12 +148,6 @@
         .btn-wa:hover, .btn-ig:hover {background:var(--secondary); color:var(--primary-deep); transform:translateY(-2px); animation:none;}
         @keyframes btnPulse {0%,100%{box-shadow:0 0 0 0 rgba(198,161,91,0.3);} 50%{box-shadow:0 0 12px 1px rgba(198,161,91,0.45);}}
 
-        .floating-music {position:fixed; bottom:30px; border-radius:50%; display:flex; justify-content:center; align-items:center; z-index:1000; transition:var(--transition);}
-        .floating-music {left:30px; background:var(--primary); color:var(--secondary-light); width:48px; height:48px; font-size:18px; box-shadow:0 8px 24px rgba(15,44,38,0.25); cursor:pointer; border:1px solid var(--secondary);}
-        .floating-music:hover {background:var(--secondary); color:var(--primary-deep);}
-        .music-playing {animation:pulse 2.2s infinite;}
-        @keyframes pulse {0%{box-shadow:0 0 0 0 rgba(198,161,91,0.5);} 70%{box-shadow:0 0 0 16px rgba(198,161,91,0);} 100%{box-shadow:0 0 0 0 rgba(198,161,91,0);}}
-
         footer {text-align:center; padding:34px; background:#071815; color:rgba(255,255,255,0.4); font-size:13px; letter-spacing:0.5px;}
         .batik-ribbon {width:100%; height:36px; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20 0 A 20 20 0 0 1 40 20 A 20 20 0 0 1 20 40 A 20 20 0 0 1 0 20 A 20 20 0 0 1 20 0 Z' fill='none' stroke='%23C6A15B' stroke-width='1' opacity='0.25'/%3E%3C/svg%3E"); background-color:var(--primary);}
 
@@ -166,16 +160,11 @@
             .section-header h2 {font-size:32px;}
             .address-box {flex-direction:column; text-align:center; padding:26px; margin-top:24px;}
             .promo-banner {padding:40px 26px;}
-            .floating-music {bottom:20px; left:20px;}
             .scroll-cue {display:none;}
         }
     </style>
 </head>
 <body>
-    <!-- Musik sudah diarahkan ke file lokal img/musik.mp3 -->
-    <audio id="bgMusic" loop autoplay preload="auto"><source src="img/musik.mpeg" type="audio/mpeg"></audio>
-    <div class="floating-music" id="musicToggle" title="Putar/Hentikan Musik"><i class="fas fa-music"></i></div>
-
     <nav class="navbar" id="navbar">
         <div class="logo">Queen<span>property</span></div>
         <div class="menu-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
@@ -293,49 +282,11 @@
     <footer><p>&copy; 2026 Queenproperty. All Rights Reserved.</p></footer>
 
     <script>
-        const btnMenu=document.getElementById('mobile-menu'), navMenu=document.getElementById('nav-links'), navBar=document.getElementById('navbar'), btnMusic=document.getElementById('musicToggle'), audio=document.getElementById('bgMusic');
-        let isPlay=false; audio.volume=0.3;
+        const btnMenu=document.getElementById('mobile-menu'), navMenu=document.getElementById('nav-links'), navBar=document.getElementById('navbar');
 
         btnMenu.onclick=()=> {btnMenu.classList.toggle('active'); navMenu.classList.toggle('active');};
         document.querySelectorAll('.nav-links li a').forEach(l=>l.onclick=()=>{btnMenu.classList.remove('active'); navMenu.classList.remove('active');});
         window.onscroll=()=> navBar.classList.toggle('scrolled', window.scrollY>50);
-
-        function setPlayingUI(playing){
-            isPlay=playing;
-            btnMusic.classList.toggle('music-playing', playing);
-            btnMusic.innerHTML = playing ? '<i class="fas fa-volume-up"></i>' : '<i class="fas fa-music"></i>';
-        }
-
-        function forcePlayMusic() {
-            audio.muted = false;
-            audio.play().then(() => {
-                setPlayingUI(true);
-            }).catch(() => {
-                setPlayingUI(false);
-            });
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            audio.muted = true;
-            audio.play().then(() => {
-                setTimeout(() => { audio.muted = false; setPlayingUI(true); }, 150);
-            }).catch(() => { setPlayingUI(false); });
-        });
-
-        const resumeOnInteract = () => {
-            if(audio.paused || audio.muted){
-                forcePlayMusic();
-            }
-        };
-        ['click', 'touchstart', 'scroll', 'keydown'].forEach(evt => {
-            window.addEventListener(evt, resumeOnInteract, { once: true, passive: true });
-        });
-
-        btnMusic.onclick = (e) => {
-            e.stopPropagation();
-            if(isPlay){ audio.pause(); setPlayingUI(false); }
-            else { forcePlayMusic(); }
-        };
     </script>
 </body>
 </html>
