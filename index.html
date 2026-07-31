@@ -38,7 +38,7 @@
         * {margin:0; padding:0; box-sizing:border-box;}
         html {scroll-behavior:smooth;}
         body {font-family:'Montserrat',sans-serif; background-color:var(--bg-light); color:var(--text-dark); line-height:1.75; overflow-x:hidden;}
-        h1, h2, h3, h4, h5, h6, .logo {font-family:'Cormorant Garamond',serif; color:var(--primary); font-weight:600;}
+        h1, h2, h3, h4, h5, h6, . {font-family:'Cormorant Garamond',serif; color:var(--primary); font-weight:600;}
         a {text-decoration:none; color:inherit;}
         section {padding:120px 20px; max-width:1200px; margin:0 auto; position:relative;}
         ::selection {background:var(--secondary); color:#fff;}
@@ -59,10 +59,10 @@
         .navbar {position:fixed; top:0; left:0; width:100%; background:rgba(251,249,244,0.92); backdrop-filter:blur(14px); display:flex; justify-content:space-between; align-items:center; padding:18px 5%; z-index:999; transition:var(--transition); border-bottom:1px solid rgba(198,161,91,0.15);}
         .navbar.scrolled {padding:12px 5%; box-shadow:0 10px 40px rgba(15,44,38,0.06); background:rgba(251,249,244,0.98);}
 
-        /* Logo gambar di Header */
-        .logo {display:flex; align-items:center;}
-        .logo-img {max-height:48px; width:auto; object-fit:contain; transition:var(--transition);}
-        .navbar.scrolled .logo-img {max-height:40px;}
+        /*  gambar di Header */
+        . {display:flex; align-items:center;}
+        .-img {max-height:48px; width:auto; object-fit:contain; transition:var(--transition);}
+        .navbar.scrolled .-img {max-height:40px;}
 
         .nav-links {list-style:none; display:flex; gap:36px; align-items:center;}
         .nav-links li a {font-size:13px; font-weight:500; letter-spacing:0.5px; text-transform:uppercase; font-family:'Montserrat',sans-serif; transition:var(--transition); position:relative; padding-bottom:4px;}
@@ -191,7 +191,7 @@
 <body>
     <nav class="navbar" id="navbar">
         <a href="#home" class="logo">
-            <img src="img/logo.jpeg" alt="Queenproperty 27 Logo" class="logo-img">
+            <img src="img/logo.png" alt="Queenproperty 27 Logo" class="logo-img">
         </a>
         <div class="menu-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
         <ul class="nav-links" id="nav-links">
