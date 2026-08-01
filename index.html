@@ -237,6 +237,22 @@
         footer {text-align:center; padding:34px; background:#071815; color:rgba(255,255,255,0.4); font-size:13px; letter-spacing:0.5px;}
         .batik-ribbon {width:100%; height:36px; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20 0 A 20 20 0 0 1 40 20 A 20 20 0 0 1 20 40 A 20 20 0 0 1 0 20 A 20 20 0 0 1 20 0 Z' fill='none' stroke='%23C6A15B' stroke-width='1' opacity='0.25'/%3E%3C/svg%3E"); background-color:var(--primary);}
 
+        /* ==== Floating WhatsApp Button (gold / transparent) ==== */
+        .wa-float {position:fixed; bottom:26px; right:26px; z-index:1000; display:flex; align-items:center; justify-content:center; width:60px; height:60px; border-radius:50%; background:rgba(198,161,91,0.18); backdrop-filter:blur(10px); border:1px solid rgba(198,161,91,0.6); color:var(--secondary-light); font-size:26px; box-shadow:0 12px 30px rgba(15,44,38,0.25); transition:var(--transition); animation:waFloatPulse 2.6s ease-in-out infinite;}
+        .wa-float:hover {background:rgba(198,161,91,0.85); color:var(--primary-deep); transform:translateY(-4px) scale(1.05); box-shadow:0 16px 36px rgba(15,44,38,0.3);}
+        .wa-float::before {content:''; position:absolute; inset:0; border-radius:50%; border:1px solid rgba(198,161,91,0.5); animation:waRing 2.6s ease-out infinite;}
+        @keyframes waRing {0%{transform:scale(1); opacity:0.7;} 100%{transform:scale(1.6); opacity:0;}}
+        @keyframes waFloatPulse {0%,100%{box-shadow:0 12px 30px rgba(15,44,38,0.25), 0 0 0 0 rgba(198,161,91,0.25);} 50%{box-shadow:0 12px 30px rgba(15,44,38,0.25), 0 0 18px 4px rgba(198,161,91,0.3);}}
+        .wa-float-menu {position:fixed; bottom:96px; right:26px; z-index:1000; display:flex; flex-direction:column; gap:10px; opacity:0; visibility:hidden; transform:translateY(12px); transition:var(--transition);}
+        .wa-float-menu.active {opacity:1; visibility:visible; transform:translateY(0);}
+        .wa-float-menu a {display:flex; align-items:center; gap:10px; background:rgba(15,44,38,0.92); backdrop-filter:blur(10px); border:1px solid rgba(198,161,91,0.5); color:var(--secondary-light); padding:12px 20px; border-radius:50px; font-size:13px; font-weight:600; letter-spacing:0.5px; white-space:nowrap; box-shadow:0 10px 24px rgba(15,44,38,0.25); transition:var(--transition);}
+        .wa-float-menu a:hover {background:var(--secondary); color:var(--primary-deep); border-color:var(--secondary);}
+        .wa-float-menu a i {font-size:16px;}
+        @media (max-width:768px) {
+            .wa-float {bottom:20px; right:18px; width:54px; height:54px; font-size:22px;}
+            .wa-float-menu {bottom:84px; right:18px;}
+        }
+
         @media (max-width:768px) {
             section {padding:80px 18px;}
             .nav-links {position:fixed; top:66px; right:-100%; background:var(--bg-light); flex-direction:column; width:100%; padding:40px 0; box-shadow:0 15px 30px rgba(0,0,0,0.06); transition:0.4s; gap:24px;}
@@ -452,6 +468,13 @@
 
     <footer><p>&copy; 2026 Queen Property 27. All Rights Reserved.</p></footer>
 
+    <!-- Floating WhatsApp Button -->
+    <div class="wa-float-menu" id="waMenu">
+        <a href="https://wa.me/6282390520448?text=Halo%2C%20saya%20tertarik%20untuk%20menjadwalkan%20survei%20ke%20Perumahan%20Green%20Villa%20Kualu.%20Mohon%20informasi%20jadwal%20yang%20tersedia.%20Terima%20kasih." target="_blank"><i class="fab fa-whatsapp"></i> Admin 1</a>
+        <a href="https://wa.me/6282286123418?text=Halo%2C%20saya%20tertarik%20untuk%20menjadwalkan%20survei%20ke%20Perumahan%20Green%20Villa%20Kualu.%20Mohon%20informasi%20jadwal%20yang%20tersedia.%20Terima%20kasih." target="_blank"><i class="fab fa-whatsapp"></i> Admin 2</a>
+    </div>
+    <div class="wa-float" id="waFloat"><i class="fab fa-whatsapp"></i></div>
+
     <script>
         const btnMenu=document.getElementById('mobile-menu'), navMenu=document.getElementById('nav-links'), navBar=document.getElementById('navbar');
 
@@ -469,6 +492,18 @@
                         });
                     }
                 });
+            });
+
+            var waFloat = document.getElementById('waFloat');
+            var waMenu = document.getElementById('waMenu');
+            waFloat.addEventListener('click', function(e) {
+                e.stopPropagation();
+                waMenu.classList.toggle('active');
+            });
+            document.addEventListener('click', function(e) {
+                if (!waMenu.contains(e.target) && !waFloat.contains(e.target)) {
+                    waMenu.classList.remove('active');
+                }
             });
         });
     </script>
