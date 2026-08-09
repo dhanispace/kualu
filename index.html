@@ -273,8 +273,8 @@
                 <div class="hero-stat"><span class="num">KPR</span><span class="label">Subsidi Pemerintah</span></div>
             </div>
             <div class="hero-buttons">
-                <a href="#kontak" class="btn-primary">Jadwalkan Kunjungan</a>
-                <a href="#galeri" class="btn-outline-light">Lihat Rumahnya</a>
+                <a href="#kontak" class="btn-primary" onclick="gtag('event', 'click_cta', {'button_name': 'Jadwalkan Kunjungan - Hero'});">Jadwalkan Kunjungan</a>
+                <a href="#galeri" class="btn-outline-light" onclick="gtag('event', 'click_cta', {'button_name': 'Lihat Rumahnya - Hero'});">Lihat Rumahnya</a>
             </div>
         </div>
         <div class="scroll-cue"><span>Jelajahi</span><div class="line"></div></div>
@@ -438,14 +438,14 @@
             <p>Hunian subsidi bukan hanya tentang harga yang terjangkau, tetapi juga tentang kenyamanan, kualitas, dan tempat terbaik untuk memulai kehidupan yang lebih baik.</p>
 
             <div class="contact-buttons">
-                <a href="https://wa.me/6282390520448?text=Halo%2C%20saya%20tertarik%20untuk%20menjadwalkan%20survei%20ke%20Perumahan%20Green%20Villa%20Kualu.%20Mohon%20informasi%20jadwal%20yang%20tersedia.%20Terima%20kasih." target="_blank" class="btn-wa"><i class="fab fa-whatsapp" style="font-size:18px;"></i> Admin 1 (WhatsApp)</a>
-                <a href="https://wa.me/6282286123418?text=Halo%2C%20saya%20tertarik%20untuk%20menjadwalkan%20survei%20ke%20Perumahan%20Green%20Villa%20Kualu.%20Mohon%20informasi%20jadwal%20yang%20tersedia.%20Terima%20kasih." target="_blank" class="btn-wa"><i class="fab fa-whatsapp" style="font-size:18px;"></i> Admin 2 (WhatsApp)</a>
+                <a href="https://wa.me/6282390520448?text=Halo%2C%20saya%20tertarik%20untuk%20menjadwalkan%20survei%20ke%20Perumahan%20Green%20Villa%20Kualu.%20Mohon%20informasi%20jadwal%20yang%20tersedia.%20Terima%20kasih." target="_blank" class="btn-wa" onclick="gtag('event', 'click_whatsapp', {'button_name': 'Admin 1 - Kontak'});"><i class="fab fa-whatsapp" style="font-size:18px;"></i> Admin 1 (WhatsApp)</a>
+                <a href="https://wa.me/6282286123418?text=Halo%2C%20saya%20tertarik%20untuk%20menjadwalkan%20survei%20ke%20Perumahan%20Green%20Villa%20Kualu.%20Mohon%20informasi%20jadwal%20yang%20tersedia.%20Terima%20kasih." target="_blank" class="btn-wa" onclick="gtag('event', 'click_whatsapp', {'button_name': 'Admin 2 - Kontak'});"><i class="fab fa-whatsapp" style="font-size:18px;"></i> Admin 2 (WhatsApp)</a>
 
-                <a href="https://instagram.com/queenproperty.pku" target="_blank" class="btn-ig"><i class="fab fa-instagram" style="font-size:18px;"></i> Instagram Kami</a>
-                <a href="mailto:queenproperty27@gmail.com" class="btn-email"><i class="fas fa-envelope" style="font-size:16px;"></i> Email Kami</a>
+                <a href="https://instagram.com/queenproperty.pku" target="_blank" class="btn-ig" onclick="gtag('event', 'click_instagram', {'button_name': 'Instagram - Kontak'});"><i class="fab fa-instagram" style="font-size:18px;"></i> Instagram Kami</a>
+                <a href="mailto:queenproperty27@gmail.com" class="btn-email" onclick="gtag('event', 'click_email', {'button_name': 'Email - Kontak'});"><i class="fas fa-envelope" style="font-size:16px;"></i> Email Kami</a>
             </div>
 
-            <p class="contact-email">Atau kirim email ke <a href="mailto:queenproperty27@gmail.com">queenproperty27@gmail.com</a></p>
+            <p class="contact-email">Atau kirim email ke <a href="mailto:queenproperty27@gmail.com" onclick="gtag('event', 'click_email', {'button_name': 'Email Link - Teks'});">queenproperty27@gmail.com</a></p>
 
         </div>
     </section>
@@ -454,8 +454,8 @@
 
     <!-- Floating WhatsApp Button -->
     <div class="wa-float-menu" id="waMenu">
-        <a href="https://wa.me/6282390520448?text=Halo%2C%20saya%20tertarik%20untuk%20menjadwalkan%20survei%20ke%20Perumahan%20Green%20Villa%20Kualu.%20Mohon%20informasi%20jadwal%20yang%20tersedia.%20Terima%20kasih." target="_blank"><i class="fab fa-whatsapp"></i> Admin 1</a>
-        <a href="https://wa.me/6282286123418?text=Halo%2C%20saya%20tertarik%20untuk%20menjadwalkan%20survei%20ke%20Perumahan%20Green%20Villa%20Kualu.%20Mohon%20informasi%20jadwal%20yang%20tersedia.%20Terima%20kasih." target="_blank"><i class="fab fa-whatsapp"></i> Admin 2</a>
+        <a href="https://wa.me/6282390520448?text=Halo%2C%20saya%20tertarik%20untuk%20menjadwalkan%20survei%20ke%20Perumahan%20Green%20Villa%20Kualu.%20Mohon%20informasi%20jadwal%20yang%20tersedia.%20Terima%20kasih." target="_blank" onclick="gtag('event', 'click_whatsapp', {'button_name': 'Admin 1 - Floating'});"><i class="fab fa-whatsapp"></i> Admin 1</a>
+        <a href="https://wa.me/6282286123418?text=Halo%2C%20saya%20tertarik%20untuk%20menjadwalkan%20survei%20ke%20Perumahan%20Green%20Villa%20Kualu.%20Mohon%20informasi%20jadwal%20yang%20tersedia.%20Terima%20kasih." target="_blank" onclick="gtag('event', 'click_whatsapp', {'button_name': 'Admin 2 - Floating'});"><i class="fab fa-whatsapp"></i> Admin 2</a>
     </div>
     <div class="wa-float" id="waFloat"><i class="fab fa-whatsapp"></i></div>
 
