@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hunian Subsidi Modern di Queen Property 27</title>
 
-    <!-- Favicon / Logo di Tab Browser -->
+    <!-- Favicon / Logo Tab -->
     <link rel="icon" type="image/png" href="img/logo.png">
 
-    <!-- Open Graph / Meta Tag Pratinjau WhatsApp & Sosial Media -->
+    <!-- Open Graph & Twitter Card -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Hunian Subsidi Premium & Asri di Queen Property 27">
     <meta property="og:description" content="Menghadirkan hunian subsidi dengan desain modern, tata ruang yang nyaman, dan lingkungan yang terus berkembang.">
@@ -55,10 +55,17 @@
         section {padding:120px 20px; max-width:1200px; margin:0 auto; position:relative;}
         ::selection {background:var(--secondary); color:#fff;}
 
-        /* subtle songket-inspired motif backdrop */
-        .motif-bg {position:absolute; inset:0; opacity:0.035; pointer-events:none;
+        /* Motip background SVG */
+        .motif-bg, .promo-banner::before, .price-left::before, .why-section::before, .contact::before {
+            position:absolute; inset:0; opacity:0.035; pointer-events:none;
             background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='84' viewBox='0 0 84 84'%3E%3Cpath d='M42 4 L74 42 L42 80 L10 42 Z' fill='none' stroke='%230F2C26' stroke-width='1'/%3E%3Ccircle cx='42' cy='42' r='6' fill='none' stroke='%230F2C26' stroke-width='1'/%3E%3C/svg%3E");
-            background-size:84px 84px;}
+            background-size:84px 84px;
+        }
+        .promo-banner::before, .price-left::before, .why-section::before, .contact::before {
+            background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='84' viewBox='0 0 84 84'%3E%3Cpath d='M42 4 L74 42 L42 80 L10 42 Z' fill='none' stroke='%23C6A15B' stroke-width='1'/%3E%3C/svg%3E");
+            opacity:0.06;
+        }
+        .why-section::before, .contact::before { opacity:0.04; }
 
         .section-header {text-align:center; margin-bottom:70px; position:relative; z-index:1;}
         .motif-eyebrow {font-size:11px; text-transform:uppercase; letter-spacing:4px; color:var(--secondary-dark); font-weight:700; display:block; margin-bottom:14px; font-family:'Montserrat',sans-serif;}
@@ -67,10 +74,9 @@
         .motif-divider::after {content:'◆'; position:absolute; top:-7px; left:50%; transform:translateX(-50%); color:var(--secondary); font-size:11px; background:var(--bg-light); padding:0 8px;}
         .subtitle {color:var(--text-muted); max-width:680px; margin:0 auto; font-size:15.5px; font-weight:300;}
 
+        /* Navbar */
         .navbar {position:fixed; top:0; left:0; width:100%; background:rgba(251,249,244,0.98); display:flex; justify-content:space-between; align-items:center; padding:18px 5%; z-index:999; transition:var(--transition); border-bottom:1px solid rgba(198,161,91,0.15);}
         .navbar.scrolled {padding:12px 5%; box-shadow:0 10px 40px rgba(15,44,38,0.06); background:rgba(251,249,244,1);}
-
-        /* Logo gambar di Header */
         .logo {display:flex; align-items:center;}
         .logo-img {max-height:48px; width:auto; object-fit:contain; transition:var(--transition);}
         .navbar.scrolled .logo-img {max-height:40px;}
@@ -85,16 +91,14 @@
         .menu-toggle {display:none; flex-direction:column; cursor:pointer; gap:5px;}
         .menu-toggle .bar {width:26px; height:1.5px; background:var(--primary); transition:var(--transition);}
 
-        .hero {min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; position:relative; padding:140px 20px 80px;
-            background:linear-gradient(160deg, rgba(8,26,22,0.88), rgba(15,44,38,0.94)), url('img/l1.jpeg') center/cover no-repeat;}
+        /* Hero */
+        .hero {min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; position:relative; padding:140px 20px 80px; background:linear-gradient(160deg, rgba(8,26,22,0.88), rgba(15,44,38,0.94)), url('img/l1.jpeg') center/cover no-repeat;}
         .hero::before {content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%, rgba(198,161,91,0.14), transparent 60%);}
         .hero-content {position:relative; z-index:2; max-width:840px;}
         .promo-badge {display:inline-flex; align-items:center; gap:8px; background:transparent; color:var(--secondary-light); padding:9px 24px; border:1px solid var(--secondary); border-radius:50px; font-size:13px; font-weight:600; letter-spacing:2px; margin-bottom:32px; text-transform:uppercase; position:relative;}
-        .promo-badge strong {position:relative; z-index:1;}
-        .promo-badge i {position:relative; z-index:1;}
         .hero h1 {color:#fff; font-size:56px; line-height:1.2; margin-bottom:26px; font-weight:600;}
         .hero h1 em {font-style:italic; color:var(--secondary); font-weight:600;}
-        .hero p {color:rgba(255,255,255,0.78); font-size:17px; margin-bottom:44px; font-weight:300; max-width:700px; margin-left:auto; margin-right:auto;}
+        .hero p {color:rgba(255,255,255,0.78); font-size:17px; margin-bottom:44px; font-weight:300; max-width:700px; margin:0 auto 44px;}
         .hero-stats {display:flex; justify-content:center; gap:50px; margin-bottom:44px; flex-wrap:wrap;}
         .hero-stat {text-align:center;} .hero-stat .num {font-family:'Cormorant Garamond',serif; font-size:32px; color:var(--secondary-light); font-weight:600; display:block;}
         .hero-stat .label {font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.55);}
@@ -107,6 +111,7 @@
         .scroll-cue {position:absolute; bottom:34px; left:50%; transform:translateX(-50%); color:rgba(255,255,255,0.5); font-size:11px; letter-spacing:2px; text-transform:uppercase; display:flex; flex-direction:column; align-items:center; gap:8px; z-index:2;}
         .scroll-cue .line {width:1px; height:34px; background:linear-gradient(to bottom, rgba(255,255,255,0.6), transparent);}
 
+        /* Fitur & Promo */
         .features {display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:2px; background:rgba(15,44,38,0.06); position:relative; z-index:1;}
         .feature-card {background:var(--bg-card); padding:48px 34px; text-align:left; transition:var(--transition); position:relative;}
         .feature-card::before {content:''; position:absolute; top:0; left:0; width:0; height:2px; background:var(--secondary); transition:var(--transition);}
@@ -119,7 +124,6 @@
         .feature-card p {font-size:14px; color:var(--text-muted); font-weight:300; transition:var(--transition);}
 
         .promo-banner {background:var(--primary); color:#fff; border-radius:4px; padding:56px 50px; margin:70px auto 0; text-align:center; position:relative; overflow:hidden; max-width:900px;}
-        .promo-banner::before {content:''; position:absolute; inset:0; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='84' viewBox='0 0 84 84'%3E%3Cpath d='M42 4 L74 42 L42 80 L10 42 Z' fill='none' stroke='%23C6A15B' stroke-width='1'/%3E%3C/svg%3E"); background-size:84px 84px; opacity:0.06;}
         .promo-banner h3 {font-size:30px; margin-bottom:8px; color:var(--secondary-light); position:relative;}
         .promo-banner > p {color:rgba(255,255,255,0.6); margin-bottom:34px; position:relative; font-weight:300;}
         .promo-list {list-style:none; display:flex; flex-direction:column; gap:20px; font-size:15.5px; color:#fff; text-align:left; max-width:520px; margin:0 auto; position:relative;}
@@ -127,11 +131,10 @@
         .promo-list li strong {color:var(--secondary-light); font-weight:600;}
         .promo-list li i {color:var(--secondary); font-size:17px; margin-top:3px;}
 
-        /* ==== Harga & Spesifikasi ==== */
+        /* Harga & Spesifikasi */
         .price-section {background:#fff; position:relative;}
         .price-wrap {display:grid; grid-template-columns:1fr 1.15fr; gap:0; background:var(--bg-card); border-radius:6px; overflow:hidden; box-shadow:0 25px 60px rgba(15,44,38,0.1); border:1px solid rgba(198,161,91,0.18);}
         .price-left {background:var(--primary); color:#fff; padding:56px 44px; display:flex; flex-direction:column; justify-content:center; position:relative; overflow:hidden;}
-        .price-left::before {content:''; position:absolute; inset:0; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='84' viewBox='0 0 84 84'%3E%3Cpath d='M42 4 L74 42 L42 80 L10 42 Z' fill='none' stroke='%23C6A15B' stroke-width='1'/%3E%3C/svg%3E"); background-size:84px 84px; opacity:0.06;}
         .price-left * {position:relative;}
         .price-eyebrow {font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--secondary); font-weight:700; margin-bottom:14px;}
         .price-amount {font-family:'Cormorant Garamond',serif; font-size:44px; color:var(--secondary-light); font-weight:700; line-height:1.15; margin-bottom:6px;}
@@ -143,13 +146,8 @@
         .spec-item .spec-ico {width:42px; height:42px; flex-shrink:0; border-radius:50%; border:1px solid var(--secondary); display:flex; align-items:center; justify-content:center; color:var(--secondary); font-size:16px;}
         .spec-item .spec-txt .lbl {font-size:12px; text-transform:uppercase; letter-spacing:1px; color:var(--text-muted); margin-bottom:3px;}
         .spec-item .spec-txt .val {font-size:15.5px; font-weight:600; color:var(--primary); font-family:'Cormorant Garamond',serif;}
-        @media (max-width:860px) {
-            .price-wrap {grid-template-columns:1fr;}
-            .price-right {grid-template-columns:1fr 1fr; padding:40px 28px;}
-            .price-left {padding:44px 28px;}
-        }
 
-        /* ==== Legalitas & Pembiayaan ==== */
+        /* Legalitas */
         .legal-section {background:var(--bg-light); position:relative;}
         .legal-grid {display:grid; grid-template-columns:repeat(3, 1fr); gap:2px; background:rgba(15,44,38,0.06);}
         .legal-card {background:#fff; padding:42px 34px;}
@@ -160,11 +158,9 @@
         .legal-card ul li i {color:var(--secondary); font-size:12px; margin-top:5px;}
         .legal-card ul li strong {color:var(--text-dark); font-weight:500;}
         .legal-note {text-align:center; margin-top:28px; font-size:13px; color:var(--text-muted); font-weight:300; font-style:italic;}
-        @media (max-width:860px) {.legal-grid {grid-template-columns:1fr;}}
 
-        /* ==== Kenapa Memilih (trust) ==== */
+        /* Kenapa Memilih */
         .why-section {background:var(--primary-deep); color:#fff; position:relative; overflow:hidden;}
-        .why-section::before {content:''; position:absolute; inset:0; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='84' viewBox='0 0 84 84'%3E%3Cpath d='M42 4 L74 42 L42 80 L10 42 Z' fill='none' stroke='%23C6A15B' stroke-width='1'/%3E%3C/svg%3E"); background-size:84px 84px; opacity:0.04;}
         .why-section .section-header h2, .why-section .subtitle {color:#fff;}
         .why-section .subtitle {color:rgba(255,255,255,0.6);}
         .why-grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:26px; position:relative;}
@@ -173,7 +169,9 @@
         .why-card i {color:var(--secondary); font-size:22px; margin-bottom:16px; display:block;}
         .why-card p {font-size:14.5px; color:rgba(255,255,255,0.85); font-weight:300; line-height:1.7;}
 
-        .gallery {background:#fff; max-width:100%;} .gallery-inner {max-width:1200px; margin:0 auto;}
+        /* Galeri & Video */
+        .gallery {background:#fff; max-width:100%;} 
+        .gallery-inner {max-width:1200px; margin:0 auto;}
         .gallery-title {text-align:left; margin:0 0 24px; font-size:22px; font-weight:600; display:flex; align-items:center; gap:12px;}
         .gallery-title i {color:var(--secondary); font-size:16px;}
         .gallery-title::after {content:''; flex:1; height:1px; background:linear-gradient(90deg, rgba(198,161,91,0.5), rgba(15,44,38,0.1), rgba(198,161,91,0.5));}
@@ -186,33 +184,27 @@
         .gallery-item .cap {position:absolute; bottom:16px; left:18px; color:#fff; font-family:'Cormorant Garamond',serif; font-size:17px; opacity:0; transform:translateY(10px); transition:var(--transition);}
         .gallery-item:hover .cap {opacity:1; transform:translateY(0);}
 
-        /* Denah: gambar dengan rasio tetap, sejajarkan dari atas agar rapi saat tingginya berbeda */
         .denah-grid {align-items:start;}
         .denah-item img {height:auto; object-fit:cover;}
         .denah-item.ratio-3-4 img {aspect-ratio:4/5;}
         .denah-item.ratio-4-3 img {aspect-ratio:3/2;}
 
-        /* Rasio video 3:4.5 */
         .video-wrapper {margin:36px auto 0; position:relative; width:100%; max-width:400px; aspect-ratio:3/4.5; overflow:hidden; border-radius:4px; box-shadow:0 25px 60px rgba(15,44,38,0.18); background:#000;}
-        .video-wrapper video, .video-wrapper iframe {position:absolute; top:0; left:0; width:100%; height:100%; border:none; object-fit:cover;}
+        .video-wrapper video {position:absolute; top:0; left:0; width:100%; height:100%; border:none; object-fit:cover;}
 
-        /* Video kedua: rasio 16:9 */
-        .video-wrapper.wide {max-width:800px; aspect-ratio:16/9;}
-
+        /* Lokasi & Kontak */
         .map-container {border-radius:4px; overflow:hidden; box-shadow:0 15px 40px rgba(15,44,38,0.1);}
         .address-box {display:flex; align-items:center; gap:26px; background:#fff; padding:34px 40px; border-radius:4px; box-shadow:0 20px 50px rgba(15,44,38,0.1); margin:-45px auto 0; position:relative; z-index:10; max-width:800px; border-left:3px solid var(--secondary);}
         .address-box i {font-size:26px; color:var(--secondary);}
         .address-box h4 {margin-bottom:6px; font-size:19px; letter-spacing:0.3px;} .address-box p {color:var(--text-muted); font-size:14.5px; font-weight:300;}
 
         .contact {background:var(--primary-deep); color:#fff; text-align:center; padding:110px 20px; max-width:100%; position:relative; overflow:hidden;}
-        .contact::before {content:''; position:absolute; inset:0; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='84' viewBox='0 0 84 84'%3E%3Cpath d='M42 4 L74 42 L42 80 L10 42 Z' fill='none' stroke='%23C6A15B' stroke-width='1'/%3E%3C/svg%3E"); background-size:84px 84px; opacity:0.04;}
-        .contact-box {max-width:760px; margin:0 auto; position:relative;} .contact-box h2 {color:var(--secondary-light); font-size:38px; margin-bottom:22px;}
+        .contact-box {max-width:760px; margin:0 auto; position:relative;} 
+        .contact-box h2 {color:var(--secondary-light); font-size:38px; margin-bottom:22px;}
         .contact-box p {font-size:15.5px; color:rgba(255,255,255,0.65); margin-bottom:44px; line-height:1.85; font-weight:300;}
 
         .contact-buttons {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; flex-direction:column; align-items:center;}
-        @media (min-width: 600px) {
-            .contact-buttons {flex-direction:row;}
-        }
+        @media (min-width: 600px) { .contact-buttons {flex-direction:row;} }
 
         .btn-wa, .btn-ig, .btn-email {padding:15px 36px; border-radius:2px; font-size:13px; font-weight:600; display:flex; align-items:center; gap:10px; transition:var(--transition); text-transform:uppercase; letter-spacing:1.5px; background:transparent; border:1px solid var(--secondary); color:var(--secondary-light);}
         .btn-wa:hover, .btn-ig:hover, .btn-email:hover {background:var(--secondary); color:var(--primary-deep);}
@@ -224,19 +216,22 @@
         footer {text-align:center; padding:34px; background:#071815; color:rgba(255,255,255,0.4); font-size:13px; letter-spacing:0.5px;}
         .batik-ribbon {width:100%; height:36px; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20 0 A 20 20 0 0 1 40 20 A 20 20 0 0 1 20 40 A 20 20 0 0 1 0 20 A 20 20 0 0 1 20 0 Z' fill='none' stroke='%23C6A15B' stroke-width='1' opacity='0.25'/%3E%3C/svg%3E"); background-color:var(--primary);}
 
-        /* ==== Floating WhatsApp Button (gold / transparent) ==== */
-        .wa-float {position:fixed; bottom:26px; right:26px; z-index:1000; display:flex; align-items:center; justify-content:center; width:60px; height:60px; border-radius:50%; background:rgba(198,161,91,0.85); border:1px solid rgba(198,161,91,0.6); color:var(--primary-deep); font-size:26px; box-shadow:0 12px 30px rgba(15,44,38,0.25); transition:var(--transition);}
+        /* Floating WhatsApp */
+        .wa-float {position:fixed; bottom:26px; right:26px; z-index:1000; display:flex; align-items:center; justify-content:center; width:60px; height:60px; border-radius:50%; background:rgba(198,161,91,0.85); border:1px solid rgba(198,161,91,0.6); color:var(--primary-deep); font-size:26px; box-shadow:0 12px 30px rgba(15,44,38,0.25); transition:var(--transition); cursor:pointer;}
         .wa-float:hover {background:rgba(198,161,91,1); transform:translateY(-2px); box-shadow:0 16px 36px rgba(15,44,38,0.3);}
         .wa-float-menu {position:fixed; bottom:96px; right:26px; z-index:1000; display:flex; flex-direction:column; gap:10px; opacity:0; visibility:hidden; transform:translateY(6px); transition:var(--transition);}
         .wa-float-menu.active {opacity:1; visibility:visible; transform:translateY(0);}
         .wa-float-menu a {display:flex; align-items:center; gap:10px; background:rgba(15,44,38,0.95); border:1px solid rgba(198,161,91,0.5); color:var(--secondary-light); padding:12px 20px; border-radius:50px; font-size:13px; font-weight:600; letter-spacing:0.5px; white-space:nowrap; box-shadow:0 10px 24px rgba(15,44,38,0.25); transition:var(--transition);}
         .wa-float-menu a:hover {background:var(--secondary); color:var(--primary-deep); border-color:var(--secondary);}
         .wa-float-menu a i {font-size:16px;}
-        @media (max-width:768px) {
-            .wa-float {bottom:20px; right:18px; width:54px; height:54px; font-size:22px;}
-            .wa-float-menu {bottom:84px; right:18px;}
-        }
 
+        /* Media Queries Responsive */
+        @media (max-width:860px) {
+            .price-wrap {grid-template-columns:1fr;}
+            .price-right {grid-template-columns:1fr 1fr; padding:40px 28px;}
+            .price-left {padding:44px 28px;}
+            .legal-grid {grid-template-columns:1fr;}
+        }
         @media (max-width:768px) {
             section {padding:80px 18px;}
             .nav-links {position:fixed; top:66px; right:-100%; background:var(--bg-light); flex-direction:column; width:100%; padding:40px 0; box-shadow:0 15px 30px rgba(0,0,0,0.06); transition:0.25s ease; gap:24px;}
@@ -248,6 +243,8 @@
             .promo-banner {padding:40px 26px;}
             .scroll-cue {display:none;}
             .price-right {grid-template-columns:1fr;}
+            .wa-float {bottom:20px; right:18px; width:54px; height:54px; font-size:22px;}
+            .wa-float-menu {bottom:84px; right:18px;}
         }
     </style>
 </head>
@@ -386,18 +383,21 @@
     <section id="galeri" class="gallery">
         <div class="gallery-inner">
             <div class="section-header"><span class="motif-eyebrow">Galeri Visual</span><h2>Jelajahi Hunian Anda</h2><div class="motif-divider"></div></div>
+            
             <h3 class="gallery-title"><i class="fas fa-door-open"></i> Fasad Eksterior</h3>
             <div class="gallery-grid">
                 <div class="gallery-item"><img src="img/l1.jpeg" alt="Eksterior" loading="lazy"><span class="cap">Lingkungan Cluster</span></div>
                 <div class="gallery-item"><img src="img/l2.jpeg" alt="Eksterior" loading="lazy"><span class="cap">Tampak Depan</span></div>
                 <div class="gallery-item"><img src="img/l3.jpeg" alt="Eksterior" loading="lazy"><span class="cap">Fasad Rumah</span></div>
             </div>
+
             <h3 class="gallery-title" style="margin-top:56px;"><i class="fas fa-couch"></i> Penataan Interior</h3>
             <div class="gallery-grid">
                 <div class="gallery-item"><img src="img/d1.jpeg" alt="Interior" loading="lazy"><span class="cap">Ruang Tamu</span></div>
                 <div class="gallery-item"><img src="img/d2.jpeg" alt="Interior" loading="lazy"><span class="cap">Meja Dapur</span></div>
                 <div class="gallery-item"><img src="img/d3.jpeg" alt="Interior" loading="lazy"><span class="cap">Kamar Mandi</span></div>
             </div>
+
             <h3 class="gallery-title" style="margin-top:56px;"><i class="fas fa-drafting-compass"></i> Denah</h3>
             <div class="gallery-grid denah-grid">
                 <div class="gallery-item denah-item ratio-3-4"><img src="img/denah1.jpeg" alt="Denah Rumah" loading="lazy"><span class="cap">Denah Rumah</span></div>
@@ -405,17 +405,9 @@
             </div>
 
             <h3 class="gallery-title" style="margin-top:56px;"><i class="fas fa-play-circle"></i> Video Tour</h3>
-
             <div class="video-wrapper">
                 <video controls playsinline webkit-playsinline x5-playsinline preload="metadata" poster="img/l1.jpeg">
                     <source src="img/v.mp4" type="video/mp4">
-                    Browser Anda tidak mendukung pemutaran video ini.
-                </video>
-            </div>
-
-            <div class="video-wrapper wide">
-                <video controls playsinline webkit-playsinline x5-playsinline preload="metadata" poster="img/l1.jpeg">
-                    <source src="img/w.mp4" type="video/mp4">
                     Browser Anda tidak mendukung pemutaran video ini.
                 </video>
             </div>
@@ -440,13 +432,11 @@
             <div class="contact-buttons">
                 <a href="https://wa.me/6282390520448?text=Halo%2C%20saya%20tertarik%20untuk%20menjadwalkan%20survei%20ke%20Perumahan%20Green%20Villa%20Kualu.%20Mohon%20informasi%20jadwal%20yang%20tersedia.%20Terima%20kasih." target="_blank" class="btn-wa" onclick="gtag('event', 'click_whatsapp', {'button_name': 'Admin 1 - Kontak'});"><i class="fab fa-whatsapp" style="font-size:18px;"></i> Admin 1 (WhatsApp)</a>
                 <a href="https://wa.me/6282286123418?text=Halo%2C%20saya%20tertarik%20untuk%20menjadwalkan%20survei%20ke%20Perumahan%20Green%20Villa%20Kualu.%20Mohon%20informasi%20jadwal%20yang%20tersedia.%20Terima%20kasih." target="_blank" class="btn-wa" onclick="gtag('event', 'click_whatsapp', {'button_name': 'Admin 2 - Kontak'});"><i class="fab fa-whatsapp" style="font-size:18px;"></i> Admin 2 (WhatsApp)</a>
-
                 <a href="https://instagram.com/queenproperty.pku" target="_blank" class="btn-ig" onclick="gtag('event', 'click_instagram', {'button_name': 'Instagram - Kontak'});"><i class="fab fa-instagram" style="font-size:18px;"></i> Instagram Kami</a>
                 <a href="mailto:queenproperty27@gmail.com" class="btn-email" onclick="gtag('event', 'click_email', {'button_name': 'Email - Kontak'});"><i class="fas fa-envelope" style="font-size:16px;"></i> Email Kami</a>
             </div>
 
             <p class="contact-email">Atau kirim email ke <a href="mailto:queenproperty27@gmail.com" onclick="gtag('event', 'click_email', {'button_name': 'Email Link - Teks'});">queenproperty27@gmail.com</a></p>
-
         </div>
     </section>
 
@@ -460,15 +450,19 @@
     <div class="wa-float" id="waFloat"><i class="fab fa-whatsapp"></i></div>
 
     <script>
-        const btnMenu=document.getElementById('mobile-menu'), navMenu=document.getElementById('nav-links'), navBar=document.getElementById('navbar');
+        const btnMenu = document.getElementById('mobile-menu'), 
+              navMenu = document.getElementById('nav-links'), 
+              navBar  = document.getElementById('navbar'),
+              waFloat = document.getElementById('waFloat'),
+              waMenu  = document.getElementById('waMenu');
 
-        btnMenu.onclick=()=> {btnMenu.classList.toggle('active'); navMenu.classList.toggle('active');};
-        document.querySelectorAll('.nav-links li a').forEach(l=>l.onclick=()=>{btnMenu.classList.remove('active'); navMenu.classList.remove('active');});
+        btnMenu.onclick = () => { btnMenu.classList.toggle('active'); navMenu.classList.toggle('active'); };
+        document.querySelectorAll('.nav-links li a').forEach(l => l.onclick = () => { btnMenu.classList.remove('active'); navMenu.classList.remove('active'); });
 
         let scrollTicking = false;
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', () => {
             if (!scrollTicking) {
-                window.requestAnimationFrame(function() {
+                window.requestAnimationFrame(() => {
                     navBar.classList.toggle('scrolled', window.scrollY > 50);
                     scrollTicking = false;
                 });
@@ -476,25 +470,18 @@
             }
         }, { passive: true });
 
-        document.addEventListener("DOMContentLoaded", function() {
-            var videos = document.querySelectorAll("video");
-            videos.forEach(function(vid) {
-                vid.addEventListener("click", function() {
-                    if (vid.paused) {
-                        vid.play().catch(function(e) {
-                            console.log("Autoplay ditahan oleh peramban internal IG:", e);
-                        });
-                    }
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll("video").forEach(vid => {
+                vid.addEventListener("click", () => {
+                    if (vid.paused) vid.play().catch(e => console.log("Autoplay ditahan:", e));
                 });
             });
 
-            var waFloat = document.getElementById('waFloat');
-            var waMenu = document.getElementById('waMenu');
-            waFloat.addEventListener('click', function(e) {
+            waFloat.addEventListener('click', e => {
                 e.stopPropagation();
                 waMenu.classList.toggle('active');
             });
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', e => {
                 if (!waMenu.contains(e.target) && !waFloat.contains(e.target)) {
                     waMenu.classList.remove('active');
                 }
